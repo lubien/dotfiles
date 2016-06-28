@@ -14,3 +14,5 @@ sudo apt-get install git
 
 # oceanic-next-shell
 git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
+
+ln -sfv ~/dotfiles/.nvimrc ~/.config/nvim/init.vim
