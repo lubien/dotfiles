@@ -9,7 +9,7 @@ sudo apt-get install neovim
 # vim-plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# git 
+# git
 sudo apt-get install git
 
 # oceanic-next-shell
