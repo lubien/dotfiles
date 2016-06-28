@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # neovim
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/unstable
