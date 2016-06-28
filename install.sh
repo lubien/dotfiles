@@ -11,6 +11,8 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 
 # git
 sudo apt-get install git
+# tmux
+sudo apt-get install tmux
 
 # oceanic-next-shell
 git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
