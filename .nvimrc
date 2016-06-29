@@ -63,6 +63,7 @@ set background=dark
 colorscheme OceanicNext
 :let g:airline_theme='oceanicnext'
 let g:airline#extensions#tabline#enabled = 1
+set shiftwidth=2
 set tabstop=2
 :set list
 set listchars=tab:-\ ,eol:¬
