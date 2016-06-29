@@ -32,4 +32,11 @@ else
 	echo "tmux already installed";
 fi
 
-ln -sfv ~/dotfiles/.nvimrc ~/.config/nvim/init.vim
+# stow
+if ! hash stow 2>/dev/null; then
+	sudo apt-get install stow
+else
+	echo "stow already installed";
+fi
+
+stow neovim
