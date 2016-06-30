@@ -1,0 +1,3 @@
+# `compiuter is named after a brazilian joke
+
+gcc ./$1.c -o ./$1 && ./$1
