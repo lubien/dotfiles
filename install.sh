@@ -48,5 +48,6 @@ else
 fi
 
 stow bin
+stow git
 stow neovim
 stow zsh
