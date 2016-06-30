@@ -39,4 +39,13 @@ else
 	echo "stow already installed";
 fi
 
+if hash zsh 2>/dev/null; then
+	echo "zsh already installed";
+else
+	sudo apt-get install zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+stow bin
 stow neovim
+stow zsh
