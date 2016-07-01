@@ -32,8 +32,8 @@ set hidden
 :imap ii <Esc>
 
 " Move between splits and buffers
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-B> :bprev<CR>
+nnoremap <C-M> :bnext<CR>
+nnoremap <C-N> :bprev<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
