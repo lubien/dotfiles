@@ -96,6 +96,9 @@ DEFAULT_USER=joseph
 
 # Add ~/bin to path
 export PATH="$HOME/bin:$PATH"
+# Use colors in Visionmedia's debbuger
+# See: https://github.com/visionmedia/debug/blob/master/node.js#L45
+export DEBUG_COLORS=1
 
 # Aliases
 source ~/aliases.zsh
