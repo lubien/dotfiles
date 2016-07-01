@@ -12,6 +12,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ap/vim-buftabline'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -55,6 +56,10 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" NERDTree
+map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
 
 " Theme
 let base16colorspace=256
