@@ -39,7 +39,7 @@ else
 	echo "stow already installed";
 fi
 
-if hash zsh 2>/dev/null; then
+if ! hash zsh 2>/dev/null; then
 	echo "zsh already installed";
 else
 	sudo apt-get install zsh
@@ -51,6 +51,8 @@ else
 	wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 	mv PowerlineSymbols.otf ~/.fonts/
 	mkdir -p .config/fontconfig/conf.d
+	fc-cache -vf ~/.fonts/
+	mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fi
 
 stow bin
