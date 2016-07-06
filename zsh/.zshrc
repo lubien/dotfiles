@@ -92,7 +92,7 @@ export TERM=xterm-256color
 export NVM_DIR="/home/joseph/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-DEFAULT_USER=joseph
+DEFAULT_USER=`whoami`
 
 # Add ~/bin to path
 export PATH="$HOME/bin:$PATH"
