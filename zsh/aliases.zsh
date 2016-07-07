@@ -26,3 +26,9 @@ alias vup='vagrant up'
 alias vsus='vagrant suspend'
 alias vhalt='vagrant halt'
 alias vdie='vagrant destroy'
+
+
+# Git
+alias gs='git status'
+alias gcm='git commit'
+alias gp='git push' 
