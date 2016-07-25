@@ -71,8 +71,8 @@ autocmd InsertLeave * :set nonumber relativenumber
 syntax enable
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme OceanicNext
-:let g:airline_theme='oceanicnext'
+colorscheme onedark
+:let g:airline_theme='kolor'
 let g:airline#extensions#tabline#enabled = 1
 set shiftwidth=2
 set tabstop=2
