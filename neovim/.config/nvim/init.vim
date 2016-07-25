@@ -14,6 +14,8 @@ Plug 'ap/vim-buftabline'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'romgrk/winteract.vim'
+Plug 'spolu/dwm.vim'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -33,9 +35,12 @@ set hidden
 " Exit insert mode
 :imap ii <Esc>
 
+" Enter Winteract mode
+nmap gw :InteractiveWindow<CR>
+
 " Move between splits and buffers
-nnoremap <C-M> :bnext<CR>
-nnoremap <C-N> :bprev<CR>
+"nnoremap <C-M> :bnext<CR>
+"nnoremap <C-N> :bprev<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
