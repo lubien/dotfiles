@@ -60,3 +60,4 @@ stow bin
 stow git
 stow neovim
 stow zsh
+stow tmux
