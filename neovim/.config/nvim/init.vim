@@ -17,6 +17,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'romgrk/winteract.vim'
 Plug 'spolu/dwm.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'justincampbell/vim-eighties'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
