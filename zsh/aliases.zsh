@@ -18,6 +18,7 @@ alias c='clear'
 alias ll='ls -la'
 alias l.='ls -d .*'
 alias refresh='source ~/.zshrc'
+alias sagi='sudo apt-get install'
 
 # Quickly open config files
 alias nvimconf='nvim ~/.config/nvim/init.vim'
