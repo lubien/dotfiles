@@ -18,6 +18,7 @@ Plug 'romgrk/winteract.vim'
 Plug 'spolu/dwm.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'justincampbell/vim-eighties'
+Plug 'elixir-lang/vim-elixir'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -39,6 +40,17 @@ set hidden
 
 " Enter Winteract mode
 nmap gw :InteractiveWindow<CR>
+
+" Theres a trick here: when I hit C-Space,
+" activate focus by dwm plugin then call
+" vim-eighties resize
+"nmap <C-Space> :<Plug>DWMFocus<CR>
+function! FocusWindow()
+	execute "<Plug>DWMFocus"
+	"execute 'EightiesResize'
+endfunction
+
+:nnoremap <C-Space> :call FocusWindow()<CR>
 
 " Move between splits and buffers
 "nnoremap <C-M> :bnext<CR>
