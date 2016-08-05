@@ -100,5 +100,8 @@ export PATH="$HOME/bin:$PATH"
 # See: https://github.com/visionmedia/debug/blob/master/node.js#L45
 export DEBUG_COLORS=1
 
+# Haskell
+export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
+
 # Aliases
 source ~/aliases.zsh
