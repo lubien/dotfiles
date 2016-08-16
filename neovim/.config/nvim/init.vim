@@ -114,3 +114,5 @@ autocmd! BufWritePost,BufEnter * Neomake
 let g:javascript_plugin_jsdoc = 1
 
 set updatetime=250
+
+au FileType hs,elm setlocal expandtab shiftwidth=2
