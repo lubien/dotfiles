@@ -19,6 +19,7 @@ Plug 'spolu/dwm.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'justincampbell/vim-eighties'
 Plug 'elixir-lang/vim-elixir'
+Plug 'neovimhaskell/haskell-vim'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -89,13 +90,13 @@ autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set nonumber relativenumber
 
 syntax enable
+filetype plugin indent on
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme onedark
 :let g:airline_theme='kolor'
 let g:airline#extensions#tabline#enabled = 1
 set shiftwidth=2
-set tabstop=2
 :set list
 set listchars=tab:-\ ,eol:¬
 highlight Normal ctermbg=none
@@ -112,6 +113,14 @@ autocmd! BufWritePost,BufEnter * Neomake
 
 " JavaScript stuff
 let g:javascript_plugin_jsdoc = 1
+
+" Haskell stuff
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 
 set updatetime=250
 
