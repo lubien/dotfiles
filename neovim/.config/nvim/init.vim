@@ -20,6 +20,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'justincampbell/vim-eighties'
 Plug 'elixir-lang/vim-elixir'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -121,6 +123,11 @@ let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
 let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+
+" Markdown stuff
+let g:vim_markdown_folding_disabled = 1
+" TODO:
+" au FileType md setlocal conceallevel=2
 
 set updatetime=250
 
