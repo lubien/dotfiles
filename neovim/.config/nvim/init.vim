@@ -114,7 +114,11 @@ let g:neomake_javascript_eslint_args= ['--reporter=compact']
 autocmd! BufWritePost,BufEnter * Neomake
 
 " JavaScript stuff
+au FileType javascript setlocal tabstop=2 shiftwidth=2
 let g:javascript_plugin_jsdoc = 1
+
+" C stuff
+au FileType c setlocal tabstop=2 shiftwidth=2
 
 " Haskell stuff
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
