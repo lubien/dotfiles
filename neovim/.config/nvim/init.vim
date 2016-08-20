@@ -22,6 +22,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'elmcast/elm-vim'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
@@ -106,11 +107,14 @@ highlight NonText ctermbg=none
 highlight NonText ctermfg=5
 highlight SpecialKey ctermfg=5
 
+" If you keep mistakely pressing the touchpad you'll understand me
+set mouse=
+
 " Linting
 "let g:neomake_open_list = 2
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = 'xo'
-let g:neomake_javascript_eslint_args= ['--reporter=compact']
+"let g:neomake_javascript_eslint_exe = 'eslint'
+"let g:neomake_javascript_eslint_args= ['--reporter=compact']
 autocmd! BufWritePost,BufEnter * Neomake
 
 " JavaScript stuff
@@ -133,6 +137,11 @@ let g:vim_markdown_folding_disabled = 1
 " TODO:
 " au FileType md setlocal conceallevel=2
 
+" Elm stuff
+:source /home/joao/.vim/plugged/elm-vim/ftplugin/elm.vim
+let g:elm_format_autosave = 1
+autocmd BufWritePre *.elm call elm#Format()
+
 set updatetime=250
 
-au FileType hs,elm setlocal expandtab shiftwidth=2
+au FileType hs setlocal expandtab shiftwidth=2
