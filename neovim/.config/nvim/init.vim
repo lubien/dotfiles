@@ -141,6 +141,7 @@ let g:vim_markdown_folding_disabled = 1
 :source /home/joao/.vim/plugged/elm-vim/ftplugin/elm.vim
 let g:elm_format_autosave = 1
 autocmd BufWritePre *.elm call elm#Format()
+au FileType hs setlocal expandtab shiftwidth=4
 
 set updatetime=250
 

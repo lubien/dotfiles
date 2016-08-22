@@ -1,0 +1,1 @@
+figlet $1 | cowsay -n -f kitty
