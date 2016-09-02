@@ -23,6 +23,8 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'elmcast/elm-vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'slashmili/alchemist.vim'
 
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'joshdick/onedark.vim'
