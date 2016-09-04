@@ -120,8 +120,19 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost,BufEnter * Neomake
 
 " JavaScript stuff
-au FileType javascript setlocal tabstop=2 shiftwidth=2
+au FileType javascript setlocal tabstop=2 shiftwidth=2 conceallevel=2 foldmethod=syntax foldlevel=2
 let g:javascript_plugin_jsdoc = 1
+
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
 
 " C stuff
 au FileType c setlocal tabstop=2 shiftwidth=2
@@ -148,3 +159,4 @@ au FileType hs setlocal expandtab shiftwidth=4
 set updatetime=250
 
 au FileType hs setlocal expandtab shiftwidth=2
+
