@@ -1,10 +1,10 @@
 # Navigation
 alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 alias .....='cd ../../../../'
-alias .4='cd ../../../../'
-alias .5='cd ../../../../..'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
 
 # Tree
 alias t1='tree -L 1'
