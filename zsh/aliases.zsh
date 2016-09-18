@@ -20,6 +20,10 @@ alias l.='ls -d .*'
 alias refresh='source ~/.zshrc'
 alias sagi='sudo apt-get install'
 
+# Git
+alias gis='git s'
+alias gp='git push'
+
 # Quickly open config files
 alias nvimconf='nvim ~/.config/nvim/init.vim'
 alias zshconf='nvim ~/.zshrc'
