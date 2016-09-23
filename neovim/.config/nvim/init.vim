@@ -1,41 +1,7 @@
 call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'chriskempson/base16-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'rakr/vim-one'
-Plug 'neomake/neomake'
-Plug 'airblade/vim-gitgutter'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ap/vim-buftabline'
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot'
-Plug 'romgrk/winteract.vim'
-Plug 'spolu/dwm.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'justincampbell/vim-eighties'
-Plug 'elixir-lang/vim-elixir'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'elmcast/elm-vim'
-Plug 'wakatime/vim-wakatime'
-Plug 'slashmili/alchemist.vim'
-
-Plug 'marcopaganini/termschool-vim-theme'
-Plug 'joshdick/onedark.vim'
-Plug 'mkarmona/colorsbox'
-Plug 'jyota/vimColors'
-Plug 'fent/vim-frozen'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'crusoexia/vim-monokai'
-Plug 'pangloss/vim-javascript'
-"Plug 'Shougo/deoplete.nvim'
-
+for plug in split(globpath('~/.config/nvim/plugs', '*.plug'), '\n')
+  exe 'source' plug
+endfor
 call plug#end()
 
 let g:ctrlp_custom_ignore = 'node_modules\|git'
@@ -98,7 +64,7 @@ syntax enable
 filetype plugin on
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme onedark
+colorscheme one
 :let g:airline_theme='kolor'
 let g:airline#extensions#tabline#enabled = 1
 set shiftwidth=2

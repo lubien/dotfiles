@@ -1,0 +1,16 @@
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
+" Elm
+Plug 'elmcast/elm-vim'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
+
+" JavaScript
+Plug 'pangloss/vim-javascript'
+
