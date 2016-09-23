@@ -95,7 +95,7 @@ autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set nonumber relativenumber
 
 syntax enable
-filetype plugin indent on
+filetype plugin on
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme onedark
@@ -119,44 +119,5 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 "let g:neomake_javascript_eslint_args= ['--reporter=compact']
 autocmd! BufWritePost,BufEnter * Neomake
 
-" JavaScript stuff
-au FileType javascript setlocal tabstop=2 shiftwidth=2 conceallevel=2 foldmethod=syntax foldlevel=2
-let g:javascript_plugin_jsdoc = 1
-
-let g:javascript_conceal_function       = "ƒ"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_this           = "@"
-let g:javascript_conceal_return         = "⇚"
-let g:javascript_conceal_undefined      = "¿"
-let g:javascript_conceal_NaN            = "ℕ"
-let g:javascript_conceal_prototype      = "¶"
-let g:javascript_conceal_static         = "•"
-let g:javascript_conceal_super          = "Ω"
-let g:javascript_conceal_arrow_function = "⇒"
-
-" C stuff
-au FileType c setlocal tabstop=2 shiftwidth=2
-
-" Haskell stuff
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-
-" Markdown stuff
-let g:vim_markdown_folding_disabled = 1
-" TODO:
-" au FileType md setlocal conceallevel=2
-
-" Elm stuff
-:source /home/joao/.vim/plugged/elm-vim/ftplugin/elm.vim
-let g:elm_format_autosave = 1
-autocmd BufWritePre *.elm call elm#Format()
-au FileType hs setlocal expandtab shiftwidth=4
-
 set updatetime=250
-
-au FileType hs setlocal expandtab shiftwidth=2
 
