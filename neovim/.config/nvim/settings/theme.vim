@@ -17,6 +17,7 @@ autocmd InsertLeave * :set nonumber relativenumber
 
 :let g:airline_theme='kolor'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 set shiftwidth=2
 set listchars=tab:-\ ,eol:¬
