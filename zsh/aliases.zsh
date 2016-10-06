@@ -7,6 +7,7 @@ alias .5='cd ../../../../../'
 alias .6='cd ../../../../../../'
 
 # Tree
+alias tree='tree -I "node_modules"'
 alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
@@ -38,3 +39,11 @@ alias vup='vagrant up'
 alias vsus='vagrant suspend'
 alias vhalt='vagrant halt'
 alias vdie='vagrant destroy'
+
+up_function() {
+  for ((i=1; i <= $1; i++)) do
+    cd ..
+  done
+}
+
+alias up=up_function
