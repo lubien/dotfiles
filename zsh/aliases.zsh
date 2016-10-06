@@ -40,6 +40,10 @@ alias vsus='vagrant suspend'
 alias vhalt='vagrant halt'
 alias vdie='vagrant destroy'
 
+# AdonisJS
+alias ace='node --harmony_proxies ./ace'
+
+# Moar useful stuff
 up_function() {
   for ((i=1; i <= $1; i++)) do
     cd ..
