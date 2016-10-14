@@ -27,6 +27,7 @@ fi
 
 # tmux
 if ! hash tmux 2>/dev/null; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	sudo apt-get install tmux
 else
 	echo "tmux already installed";
