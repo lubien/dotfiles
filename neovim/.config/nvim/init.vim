@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 for plug in split(globpath('~/.config/nvim/plugs', '*.plug'), '\n')
   exe 'source' plug
@@ -13,4 +15,7 @@ endfor
 
 " Exit insert mode
 :imap ii <Esc>
+
+:set exrc
+set secure
 
