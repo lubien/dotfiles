@@ -2,17 +2,27 @@ let g:dwm_map_keys=0
 
 " DWM
 " See: https://github.com/spolu/dwm.vim/blob/master/plugin/dwm.vim#L196-L224
-nnoremap <C-z> <C-W>w
-nnoremap <C-x> <C-W>W
+nnoremap <C-x> <C-W>w
+nnoremap <C-z> <C-W>W
 
 if !hasmapto('<Plug>DWMNew')
-    nmap <C-N> <Plug>DWMNew
+  nmap <C-N> <Plug>DWMNew
 endif
+
 if !hasmapto('<Plug>DWMClose')
-    nmap <C-C> <Plug>DWMClose
+  nmap <C-C> <Plug>DWMClose
 endif
+
 if !hasmapto('<Plug>DWMFocus')
-    nmap <C-Space> <Plug>DWMFocus
+  " Theres a trick here: when I hit C-Space,
+  " activate focus by dwm plugin then call
+  " vim-eighties resize
+  function! FocusWindow()
+    execute "normal \<Plug>DWMFocus"
+    execute 'EightiesResize'
+  endfunction
+
+  :nnoremap <Space> :call FocusWindow()<CR>
 endif
 
 " Move between terminal splits
