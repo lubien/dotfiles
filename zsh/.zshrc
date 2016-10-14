@@ -105,3 +105,6 @@ export PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.3/bin:$PATH"
 
 # Aliases
 source ~/aliases.zsh
+
+# Map Caps to F10 for Tmux mapping
+xmodmap -e "keycode 66 = F10" -e 'clear Lock'

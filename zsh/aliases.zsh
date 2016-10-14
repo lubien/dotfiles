@@ -29,10 +29,15 @@ alias gp='git push'
 alias nvimconf='nvim ~/.config/nvim/init.vim'
 alias zshconf='nvim ~/.zshrc'
 alias gitconf='nvim ~/.gitconfig'
+alias tmuxconf='nvim ~/.tmux.conf'
 
 # Quickly jump to my folders
 alias devf='cd ~/dev'
 alias dotf='cd ~/dotfiles'
+
+# TMux
+alias tmuxr='tmux source-file ~/.tmux.conf'
+alias tmuxn='tmux new -s'
 
 # Vagrant
 alias vup='vagrant up'
