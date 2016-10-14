@@ -38,6 +38,8 @@ alias dotf='cd ~/dotfiles'
 # TMux
 alias tmuxr='tmux source-file ~/.tmux.conf'
 alias tmuxn='tmux new -s'
+alias tmuxa='tmux attach -t'
+alias tmuxl='tmux ls'
 
 # Vagrant
 alias vup='vagrant up'

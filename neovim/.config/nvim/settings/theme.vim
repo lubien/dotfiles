@@ -8,18 +8,18 @@ filetype plugin on
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 
-colorscheme tender
+colorscheme onedark
 
-:set relativenumber
-autocmd InsertEnter * :set number norelativenumber
-autocmd InsertLeave * :set nonumber relativenumber
+:set number relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 :set list
 
 :let g:airline_theme='tender'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-set shiftwidth=2
+set shiftwidth=4
 set listchars=tab:-\ ,eol:¬
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
