@@ -11,3 +11,5 @@
 :nnoremap ,gw :Gwrite<CR>
 :nnoremap ,gd :Gdiff<CR>
 :nnoremap ,grm :Gremove<CR>
+:nnoremap ,gpu :'<,'>diffput<CR>
+:nnoremap ,gup :diffupdate<CR>
