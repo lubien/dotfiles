@@ -16,6 +16,11 @@ endfor
 " Exit insert mode
 :imap ii <Esc>
 
+" Project specific `.nvimrc`
 :set exrc
 set secure
+
+" Let me quickly refresh my settings without having to
+" restart Neovim
+:nnoremap <C-R> :so ~/.config/nvim/init.vim<CR>
 
