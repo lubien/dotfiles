@@ -5,4 +5,5 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 Plug 'wakatime/vim-wakatime'
+Plug 'tpope/vim-fugitive'
 
