@@ -11,7 +11,7 @@ snippet ob
 	{${0}}
 
 snippet mt
-	.${1}(${2})
+	.${1}(${2})${0}
 
 snippet fn
 	function ${1}(${2}) {
@@ -24,10 +24,13 @@ snippet gn
 	}
 
 snippet cl
-	console.log(${0})
+	console.log(${1});
+	${0}
 
 snippet ct
-	console.log('testing ${1}', ${0})
+	console.log('testing${1}', ${2});
+	${0}
 
 snippet ce
-	console.error(${0})
+	console.error(${1});
+	${0}
