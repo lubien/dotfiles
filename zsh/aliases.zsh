@@ -49,6 +49,7 @@ alias vdie='vagrant destroy'
 
 # AdonisJS
 alias ace='node --harmony_proxies ./ace'
+alias acemr='ace migration:refresh && ace db:seed'
 
 # Moar useful stuff
 up_function() {
