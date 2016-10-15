@@ -5,13 +5,13 @@ let g:dwm_map_keys=0
 nnoremap <C-x> <C-W>w
 nnoremap <C-z> <C-W>W
 
+
 if !hasmapto('<Plug>DWMNew')
   nmap <C-N> <Plug>DWMNew
 endif
 
-if !hasmapto('<Plug>DWMClose')
-  nmap <C-C> <Plug>DWMClose
-endif
+" Instead of C-c close window (DWM plugin), delete buffer
+nnoremap <C-C> :bd<CR>
 
 if !hasmapto('<Plug>DWMFocus')
   " Theres a trick here: when I hit C-Space,
