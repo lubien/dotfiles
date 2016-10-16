@@ -1,0 +1,3 @@
+#!/bin/bash
+source utils.sh
+nvimOrLs ~/.config/nvim/snippets '.snippets' $1

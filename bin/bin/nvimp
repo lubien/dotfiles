@@ -1,0 +1,3 @@
+#!/bin/bash
+source utils.sh
+nvimOrLs ~/.config/nvim/plugs '.plug' $1
