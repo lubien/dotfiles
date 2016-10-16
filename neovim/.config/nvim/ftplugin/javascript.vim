@@ -18,3 +18,6 @@ setlocal shiftwidth=2
 "setlocal foldmethod=syntax
 "setlocal foldlevel=2
 
+" Run node system with Control-r
+:nnoremap <C-r> :terminal node %<CR>
+
