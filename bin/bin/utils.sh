@@ -4,7 +4,7 @@ function nvimOrLs {
 	possible_file=$folder/$3$sufix
 	force=$4
 
-	if [ -e $possible_file ] || [ $force == '-f' ]
+	if [ -e $possible_file ] || [ $force -a $force == '-f' ]
 	then
 		nvim $possible_file
 	else
