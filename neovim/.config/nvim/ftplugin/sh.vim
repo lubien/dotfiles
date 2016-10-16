@@ -1,4 +1,3 @@
-set foldlevel=1
 set noexpandtab
 set copyindent
 set preserveindent
