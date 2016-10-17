@@ -53,6 +53,8 @@ alias ace='node --harmony_proxies ./ace'
 alias acemr='ace migration:refresh && ace db:seed'
 
 # Moar useful stuff
+
+# `up N` goes N dirs up
 up_function() {
   for ((i=1; i <= $1; i++)) do
     cd ..
@@ -60,3 +62,14 @@ up_function() {
 }
 
 alias up=up_function
+
+# Makes a dir and cd into it
+mk_function() {
+	if [ $1 ]
+	then
+		mkdir $1
+		cd $1
+	fi
+}
+
+alias mk=mk_function
