@@ -73,3 +73,23 @@ mk_function() {
 }
 
 alias mk=mk_function
+
+# Git clone then cd
+clone_function() {
+	if [ $1 ]
+	then
+		full=$1
+		if [ $2 ]
+		then
+			reponame=$2
+		else
+			with_dot_git="${full##*/}"
+			reponame="${with_dot_git%.*}"
+		fi
+
+		git clone $full $reponame
+		cd $reponame
+	fi
+}
+
+alias clone=clone_function
