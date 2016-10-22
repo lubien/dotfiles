@@ -6,7 +6,6 @@ for plug in split(globpath('~/.config/nvim/plugs', '*.plug'), '\n')
 endfor
 call plug#end()
 
-let g:ctrlp_custom_ignore = 'node_modules\|git'
 set hidden
 
 for setting in split(globpath('~/.config/nvim/settings', '*.vim'), '\n')
