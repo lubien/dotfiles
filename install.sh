@@ -8,6 +8,17 @@ else
 	echo "Git already installed";
 fi
 
+# fzf
+if ! hash fzf 2>/dev/null; then
+	# the silver searcher is a dependency to stuff I do
+	sudo apt-get install silversearcher-ag
+
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+	~/.fzf/install
+else
+	echo "fzf already installed";
+fi
+
 # neovim
 if ! hash nvim 2>/dev/null; then
 	sudo apt-get install software-properties-common
