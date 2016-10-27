@@ -1,0 +1,55 @@
+#!/usr/bin/env elixir
+
+defmodule BookProgress do
+	@alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	@args_options [
+		strict: [
+			indexes: :integer,
+			label: :string,
+		],
+		aliases: [
+			i: :indexes,
+			l: :label,
+		]
+	]
+
+	def run() do
+		System.argv
+		|> parse_args
+		|> process
+	end
+
+	def parse_args(args) do
+		OptionParser.parse(args, @args_options)
+	end
+
+	def process({flags, values, _}) do
+		indexes = Keyword.get(flags, :indexes, 1)
+		label = Keyword.get(flags, :label, "chapter")
+		subindexes = values |> Enum.map(&String.to_integer/1)
+
+		1..indexes
+		|> Enum.map(fn index ->
+			[ render_checkbox("#{label |> String.capitalize} #{index}", 0)
+			| render_subindexes(label, index, Enum.fetch!(subindexes, index - 1))]
+			|> Enum.join("\n")
+		end)
+		|> Enum.join("\n\n")
+		|> IO.puts
+	end
+
+	def render_checkbox(text, depth) do
+		String.duplicate(" ", depth * 2) <> "* [ ] #{text}"
+	end
+
+	def render_subindexes(_label, _index, 0), do: []
+	def render_subindexes(label, index, subindexes) do
+		1..subindexes
+		|> Enum.map(fn subindex ->
+			render_checkbox("#{label |> String.capitalize} #{index}.#{subindex}", 1)
+		end)
+	end
+end
+
+BookProgress.run
+
