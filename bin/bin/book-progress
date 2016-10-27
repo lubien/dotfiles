@@ -1,11 +1,12 @@
 #!/usr/bin/env elixir
 
 defmodule BookProgress do
-	@alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	@alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ" |> String.codepoints
 	@args_options [
 		strict: [
 			indexes: :integer,
 			label: :string,
+			letters: :boolean,
 		],
 		aliases: [
 			i: :indexes,
@@ -26,13 +27,20 @@ defmodule BookProgress do
 	def process({flags, values, _}) do
 		indexes = Keyword.get(flags, :indexes, 1)
 		label = Keyword.get(flags, :label, "chapter")
+		use_letters = Keyword.get(flags, :letters, false)
 		subindexes = values |> Enum.map(&String.to_integer/1)
 
 		1..indexes
 		|> Enum.map(fn index ->
-			[ render_checkbox("#{label |> String.capitalize} #{index}", 0)
-			| render_subindexes(label, index, Enum.fetch!(subindexes, index - 1))]
-			|> Enum.join("\n")
+			index_label = if use_letters do
+				Enum.fetch!(@alphabet, index - 1)
+			else
+				index
+			end
+
+			[ render_checkbox("#{label |> String.capitalize} #{index_label}", 0)
+			| [render_subindexes(label, index_label, Enum.fetch!(subindexes, index - 1))] ]
+			|> Enum.join("\n\n")
 		end)
 		|> Enum.join("\n\n")
 		|> IO.puts
@@ -48,6 +56,7 @@ defmodule BookProgress do
 		|> Enum.map(fn subindex ->
 			render_checkbox("#{label |> String.capitalize} #{index}.#{subindex}", 1)
 		end)
+		|> Enum.join("\n")
 	end
 end
 
