@@ -93,3 +93,6 @@ clone_function() {
 }
 
 alias clone=clone_function
+
+# Bookmarker (https://github.com/lubien/bookmarker)
+alias bkm='bookmarker -i People -i Orders -i Templates -i Books/Rainobe -i Containers -i Fandom -i Markets'
