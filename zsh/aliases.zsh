@@ -96,3 +96,21 @@ alias clone=clone_function
 
 # Bookmarker (https://github.com/lubien/bookmarker)
 alias bkm='bookmarker -i People -i Orders -i Templates -i Books/Rainobe -i Containers -i Fandom -i Markets'
+
+publish_bookmarks_function() {
+	cwd=`pwd`
+
+	cd ~/dev/bookmarks
+	bkm -o ~/dev/bookmarks/README.md
+
+	rm -rf .git
+	git init
+	git add .
+	git cm "Generated"
+	git remote add origin git@github.com:lubien/bookmarks.git
+	gp origin master -f # here are demons
+
+	cd $cwd
+}
+
+alias publish-bookmarks=publish_bookmarks_function
