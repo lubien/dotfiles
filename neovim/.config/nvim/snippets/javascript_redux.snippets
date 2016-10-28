@@ -1,0 +1,26 @@
+snippet rat
+	const ${1:ACTION} = '${2:app}/${3:scope}/$1';
+
+snippet ratp
+	const ${1:ACTION} = '${2:app}/${3:scope}/$1';
+	const $1_PENDING = '$2/$3/$1_PENDING';
+	const $1_FULFILLED = '$2/$3/$1_FULFILLED';
+	const $1_REJECTED = '$2/$3/$1_REJECTED';
+
+snippet rdx
+	export default function ${1:reducerName}(state = ${2:INITIAL_STATE}, {type, payload = {}}) {
+		switch(type) {
+			${0}
+			default: {
+				return state;
+			}
+		}
+	}
+
+snippet rac
+	export function ${1:actionCreator}(${2:args}) {
+		return {
+			type: ${3:ACTION},
+			payload: ${4:payloadContent},
+		};
+	}
