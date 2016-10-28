@@ -51,7 +51,7 @@ ZSH_THEME="wedisagree-mod" #miloshadzic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, tmux)
 
 # User configuration
 
@@ -96,3 +96,10 @@ xmodmap -e "keycode 66 = F9" -e 'clear Lock'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Auto start tmux
+# I know zsh can do it, but I had issues.
+if [[ ! $TMUX ]];
+then
+	ts main
+fi
