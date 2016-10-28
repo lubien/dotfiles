@@ -2,9 +2,9 @@ function nvimOrLs {
 	folder=$1
 	sufix=$2
 	possible_file=$folder/$3$sufix
-	force=$4
+	force=${4-""}
 
-	if [ -e $possible_file ] || [ $force -a $force == '-f' ]
+	if [ -e $possible_file ] || [ $force ]
 	then
 		nvim $possible_file
 	else
