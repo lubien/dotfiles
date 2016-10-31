@@ -12,7 +12,12 @@ Plug 'elmcast/elm-vim'
 Plug 'plasticboy/vim-markdown'
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx'
+Plug '1995eaton/vim-better-javascript-completion'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'othree/javascript-libraries-syntax.vim'
 
 " Tmux
 Plug 'tmux-plugins/vim-tmux'
