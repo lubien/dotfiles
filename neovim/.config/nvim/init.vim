@@ -23,3 +23,5 @@ set secure
 " restart Neovim
 :nnoremap <S-R> :so ~/.config/nvim/init.vim<CR>
 
+" Time to grow in vim
+let g:hardtime_default_on = 1
