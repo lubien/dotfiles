@@ -22,5 +22,4 @@ fi
 # Key bindings
 # ------------
 source "/home/joao/.fzf/shell/key-bindings.zsh"
-bindkey '^P' fzf-file-widget
 
