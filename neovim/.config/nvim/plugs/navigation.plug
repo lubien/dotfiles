@@ -4,6 +4,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'kshenoy/vim-signature'
 
 " Windows
 "Plug 'ap/vim-buftabline'
