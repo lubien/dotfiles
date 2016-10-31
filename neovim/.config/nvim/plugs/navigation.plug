@@ -6,7 +6,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Windows
-Plug 'ap/vim-buftabline'
+"Plug 'ap/vim-buftabline'
 Plug 'romgrk/winteract.vim'
 Plug 'spolu/dwm.vim'
 Plug 'justincampbell/vim-eighties'
