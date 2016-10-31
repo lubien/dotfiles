@@ -8,21 +8,23 @@ filetype plugin on
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 
-colorscheme onedark
+colorscheme hybrid_material " onedark, quantum
 
 :set number relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 :set list
+set cursorline
+set cursorcolumn
 
 :let g:airline_theme='tender'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 set shiftwidth=4
-set listchars=tab:-\ ,eol:¬
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight NonText ctermfg=5
-highlight SpecialKey ctermfg=5
+"set listchars=tab:-\ ,eol:¬
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
+" highlight NonText ctermfg=5
+" highlight SpecialKey ctermfg=5
 
