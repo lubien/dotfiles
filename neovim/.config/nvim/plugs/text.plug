@@ -5,4 +5,6 @@ Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-system-copy'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'wellle/targets.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'honza/vim-snippets'
 
