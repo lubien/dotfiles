@@ -1,6 +1,6 @@
 set background=dark
 syntax enable
-filetype plugin on
+filetype plugin indent on
 
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "let base16colorspace=256
@@ -8,7 +8,7 @@ filetype plugin on
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 
-colorscheme hybrid_material " onedark, quantum
+colorscheme quantum-mod " onedark, quantum
 
 :set number relativenumber
 autocmd InsertEnter * :set norelativenumber
@@ -30,3 +30,9 @@ set shiftwidth=4
 " highlight NonText ctermfg=5
 " highlight SpecialKey ctermfg=5
 
+" Devicons
+let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol='λ'
+
+" NERDTree
+let NERDTreeShowHidden=1
+autocmd FileType nerdtree setlocal nolist
