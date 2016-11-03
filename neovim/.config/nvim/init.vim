@@ -29,3 +29,6 @@ let g:hardtime_default_on = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" Dominate the world
+nmap ; :
