@@ -7,7 +7,7 @@ alias .5='cd ../../../../../'
 alias .6='cd ../../../../../../'
 
 # Tree
-alias tree='tree -I "node_modules"'
+alias tree='tree -I "node_modules|_build|deps"'
 alias t1='tree -L 1'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
