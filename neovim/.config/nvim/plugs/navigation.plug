@@ -11,4 +11,5 @@ Plug 'kshenoy/vim-signature'
 Plug 'romgrk/winteract.vim'
 Plug 'spolu/dwm.vim'
 Plug 'justincampbell/vim-eighties'
+Plug 'vim-scripts/scrollfix'
 
