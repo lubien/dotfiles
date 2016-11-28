@@ -1,6 +1,6 @@
 # Overwrites
 # ----------
-export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
+export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git --ignore /node_modules --ignore /_build'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Setup fzf
