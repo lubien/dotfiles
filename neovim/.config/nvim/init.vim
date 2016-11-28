@@ -24,8 +24,9 @@ set secure
 " restart Neovim
 :nnoremap <S-R> :so ~/.config/nvim/init.vim<CR>
 
-" Time to grow in vim
-let g:hardtime_default_on = 1
+" Before: Time to grow in vim
+" After: Fuck u hardtime
+" let g:hardtime_default_on = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
