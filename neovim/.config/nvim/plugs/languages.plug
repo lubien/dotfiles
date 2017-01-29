@@ -12,6 +12,9 @@ Plug 'neovimhaskell/haskell-vim'
 " Elm
 Plug 'elmcast/elm-vim'
 
+" VueJS
+Plug 'posva/vim-vue'
+
 " Markdown
 Plug 'plasticboy/vim-markdown'
 
