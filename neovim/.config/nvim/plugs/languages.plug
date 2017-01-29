@@ -1,5 +1,6 @@
 " Misc
-Plug 'sheerun/vim-polyglot'
+" This shit bugs my JS code
+" Plug 'sheerun/vim-polyglot'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'
