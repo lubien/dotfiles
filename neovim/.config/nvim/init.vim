@@ -1,10 +1,7 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-for plug in split(globpath('~/.config/nvim/plugs', '*.plug'), '\n')
-  exe 'source' plug
-endfor
-Plug 'ryanoasis/vim-devicons'
+exec 'source' '~/.config/nvim/plugs.vim'
 call plug#end()
 
 set hidden
