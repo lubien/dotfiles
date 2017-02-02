@@ -8,7 +8,8 @@ filetype plugin indent on
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 
-colorscheme quantum-mod " onedark, quantum
+" colorscheme quantum-mod " onedark, quantum
+colorscheme hybrid_material
 
 :set number relativenumber
 autocmd InsertEnter * :set norelativenumber
@@ -20,7 +21,7 @@ set cursorcolumn
 "set showtabline=2
 "let g:airline#extensions#tabline#buffer_min_count = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='luna' " tender, luna, cobalt2
+let g:airline_theme='hybrid' " tender, luna, cobalt2
 let g:airline_powerline_fonts = 1
 
 set shiftwidth=4
