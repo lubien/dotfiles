@@ -35,34 +35,34 @@ Plug 'hail2u/vim-css3-syntax'
 " +-+-+-+
 
 " Handling column separated data
-Plug 'chrisbra/csv.vim'
+Plug 'chrisbra/csv.vim', {'for': 'csv'}
 
 " +-+-+-+-+-+-+
 " |E|l|i|x|i|r|
 " +-+-+-+-+-+-+
 
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 
-Plug 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 
 " +-+-+-+
 " |E|l|m|
 " +-+-+-+
 
-Plug 'elmcast/elm-vim'
+Plug 'elmcast/elm-vim', {'for': 'elm'}
 
 " +-+-+-+-+-+-+-+
 " |H|a|s|k|e|l|l|
 " +-+-+-+-+-+-+-+
 
 " Custom Haskell Vimscripts
-Plug 'neovimhaskell/haskell-vim'
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
 " A completion plugin for Haskell, using ghc-mod
-Plug 'eagletmt/neco-ghc'
+Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
 " A collection of vimscripts for Haskell development.
-Plug 'dag/vim2hs'
+Plug 'dag/vim2hs', {'for': 'haskell'}
 
 " +-+-+-+-+
 " |H|T|M|L|
@@ -72,51 +72,51 @@ Plug 'dag/vim2hs'
 Plug 'othree/html5.vim'
 
 " Provides support for expanding abbreviations similar to emmet
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', {'for': ['html', 'vue', 'jsx']}
 
 " +-+-+-+-+
 " |J|S|O|N|
 " +-+-+-+-+
 
 " A better JSON for Vim
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', {'for': 'json'}
 
 " +-+-+-+-+-+-+-+-+
 " |M|a|r|k|d|o|w|n|
 " +-+-+-+-+-+-+-+-+
 
 " Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " +-+-+-+-+-+-+-+-+-+-+
 " |J|a|v|a|S|c|r|i|p|t|
 " +-+-+-+-+-+-+-+-+-+-+
 
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug '1995eaton/vim-better-javascript-completion'
+Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
 
 " Provides Tern-based JavaScript editing support
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'vue'] }
 
 " +-+-+-+-+
 " |T|m|u|x|
 " +-+-+-+-+
 
 " Vim plugin for tmux.conf
-Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux', {'for': 'tmux'}
 
 " +-+-+-+
 " |V|u|e|
 " +-+-+-+
 
-Plug 'posva/vim-vue'
+Plug 'posva/vim-vue', {'for': 'vue'}
 
 " ╔╦╗┬┌─┐┌─┐
 " ║║║│└─┐│

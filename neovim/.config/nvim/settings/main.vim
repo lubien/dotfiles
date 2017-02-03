@@ -73,7 +73,7 @@ augroup vimrc-remember-cursor-position
 augroup END
 
 " Vue filetype is "vue.html.javascript.css" which Neomake can't lint
-autocmd BufNewFile,BufRead *.vue set filetype=vue
+autocmd BufNewFile,BufRead *.vue set filetype=vue conceallevel=0
 
 " ╔╦╗┌─┐┌─┐┌─┐┬┌┐┌┌─┐┌─┐
 " ║║║├─┤├─┘├─┘│││││ ┬└─┐
@@ -100,8 +100,8 @@ noremap PP "+gP<CR>
 noremap XX "+x<CR>
 
 " Fix scroll vertically when going up and down
-:nnoremap j jzz
-:nnoremap k kzz
+" :nnoremap j jzz
+" :nnoremap k kzz
 
 " Disable highlighting after search
 nmap <Leader>nh :nohlsearch<CR>

@@ -1,2 +1,2 @@
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
