@@ -51,6 +51,12 @@ set fileencodings=utf-8
 " See: http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=indent,eol,start
 
+" Highlight column 80
+set colorcolumn=80
+
+" Break lines after 80 columns
+set textwidth=80
+
 " My tabs indent settings
 set tabstop=2
 set shiftwidth=2
