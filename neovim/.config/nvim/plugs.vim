@@ -165,9 +165,11 @@ Plug 'mbbill/undotree'
 " ╝╚╝┴ ┴ └┘ ┴└─┘┴ ┴ ┴ ┴└─┘┘└┘
 
 " Motions
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
+
+Plug 'Shougo/denite.nvim'
 
 Plug 'easymotion/vim-easymotion'
 
