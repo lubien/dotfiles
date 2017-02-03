@@ -66,6 +66,9 @@ augroup vimrc-remember-cursor-position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
 
+" Vue filetype is "vue.html.javascript.css" which Neomake can't lint
+autocmd BufNewFile,BufRead *.vue set filetype=vue
+
 " ╔╦╗┌─┐┌─┐┌─┐┬┌┐┌┌─┐┌─┐
 " ║║║├─┤├─┘├─┘│││││ ┬└─┐
 " ╩ ╩┴ ┴┴  ┴  ┴┘└┘└─┘└─┘
