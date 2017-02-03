@@ -1,0 +1,15 @@
+:nnoremap <Leader>gs :Gstatus<CR>
+:nnoremap <Leader>gc :Gcommit<CR>
+:nnoremap <Leader>gm :Gmerge<CR>
+:nnoremap <Leader>gpl :Gpull<CR>
+:nnoremap <Leader>gps :Gpush<CR>
+:nnoremap <Leader>gf :Gfetch<CR>
+:nnoremap <Leader>ge :Gedit<CR>
+:nnoremap <Leader>gsp :Gsplit<CR>
+:nnoremap <Leader>gvs :Gvsplit<CR>
+:nnoremap <Leader>gr :Gread<CR>
+:nnoremap <Leader>gw :Gwrite<CR>
+:nnoremap <Leader>gd :Gdiff<CR>
+:nnoremap <Leader>grm :Gremove<CR>
+:nnoremap <Leader>gpu :'<,'>diffput<CR>
+:nnoremap <Leader>gup :diffupdate<CR>

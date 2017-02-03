@@ -1,46 +1,97 @@
+" Headers: http://patorjk.com/software/taag/
+" Header 1: Calvin S
+" Header 2: Digital
+
 " ╦  ┌─┐┌┐┌┌─┐┬ ┬┌─┐┌─┐┌─┐┌─┐
 " ║  ├─┤││││ ┬│ │├─┤│ ┬├┤ └─┐
 " ╩═╝┴ ┴┘└┘└─┘└─┘┴ ┴└─┘└─┘└─┘
 
-" Misc
+" +-+-+-+-+
+" |M|i|s|c|
+" +-+-+-+-+
+
 " This shit bugs my JS code
 " Plug 'sheerun/vim-polyglot'
 
-" CSS
+" css/less/sass/html color preview
+Plug 'gko/vim-coloresque'
+
+" +-+
+" |C|
+" +-+
+"
+" Write and run programs. Insert statements, idioms, comments etc
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+
+" +-+-+-+
+" |C|S|S|
+" +-+-+-+
+
 " CSS3 syntax (and syntax defined in some foreign specifications)
 Plug 'hail2u/vim-css3-syntax'
 
-" CSV
+" +-+-+-+
+" |C|S|V|
+" +-+-+-+
+
 " Handling column separated data
 Plug 'chrisbra/csv.vim'
 
-" Elixir
+" +-+-+-+-+-+-+
+" |E|l|i|x|i|r|
+" +-+-+-+-+-+-+
+
 Plug 'elixir-lang/vim-elixir'
 
 Plug 'slashmili/alchemist.vim'
 
-" Haskell
+" +-+-+-+
+" |E|l|m|
+" +-+-+-+
+
+Plug 'elmcast/elm-vim'
+
+" +-+-+-+-+-+-+-+
+" |H|a|s|k|e|l|l|
+" +-+-+-+-+-+-+-+
+
+" Custom Haskell Vimscripts
 Plug 'neovimhaskell/haskell-vim'
 
-" HTML
+" A completion plugin for Haskell, using ghc-mod
+Plug 'eagletmt/neco-ghc'
+
+" A collection of vimscripts for Haskell development.
+Plug 'dag/vim2hs'
+
+" +-+-+-+-+
+" |H|T|M|L|
+" +-+-+-+-+
+
 " HTML5 omnicomplete and syntax
 Plug 'othree/html5.vim'
 
-" JSON
+" Provides support for expanding abbreviations similar to emmet
+Plug 'mattn/emmet-vim'
+
+" +-+-+-+-+
+" |J|S|O|N|
+" +-+-+-+-+
+
 " A better JSON for Vim
 Plug 'elzr/vim-json'
 
-" Elm
-Plug 'elmcast/elm-vim'
+" +-+-+-+-+-+-+-+-+
+" |M|a|r|k|d|o|w|n|
+" +-+-+-+-+-+-+-+-+
 
-" VueJS
-Plug 'posva/vim-vue'
-
-" Markdown
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
 
-" JavaScript
+" +-+-+-+-+-+-+-+-+-+-+
+" |J|a|v|a|S|c|r|i|p|t|
+" +-+-+-+-+-+-+-+-+-+-+
+
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
 Plug 'mxw/vim-jsx'
@@ -54,14 +105,24 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 Plug 'othree/javascript-libraries-syntax.vim'
 
-" Tmux
+" +-+-+-+-+
+" |T|m|u|x|
+" +-+-+-+-+
+
 " Vim plugin for tmux.conf
 Plug 'tmux-plugins/vim-tmux'
+
+" +-+-+-+
+" |V|u|e|
+" +-+-+-+
+
+Plug 'posva/vim-vue'
 
 " ╔╦╗┬┌─┐┌─┐
 " ║║║│└─┐│
 " ╩ ╩┴└─┘└─┘
 
+" Asynchronous linting and make framework
 Plug 'neomake/neomake'
 
 " Dark powered asynchronous completion framework
@@ -74,6 +135,7 @@ Plug 'mhinz/vim-signify'
 
 Plug 'editorconfig/editorconfig-vim'
 
+" Better whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'sheerun/vim-polyglot'
@@ -87,9 +149,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'MarcWeber/vim-addon-mw-utils'
 
 Plug 'tomtom/tlib_vim'
-
-" Concise vim script that implements some of TextMate's snippets features in Vim
-Plug 'garbas/vim-snipmate'
 
 Plug 'takac/vim-hardtime'
 
@@ -123,6 +182,7 @@ Plug 'kshenoy/vim-signature'
 "Plug 'ap/vim-buftabline'
 Plug 'romgrk/winteract.vim'
 
+" Tiled Window Management
 Plug 'spolu/dwm.vim'
 
 Plug 'justincampbell/vim-eighties'
@@ -150,6 +210,13 @@ Plug 'wellle/targets.vim'
 
 Plug 'jiangmiao/auto-pairs'
 
+" Concise vim script that implements some of TextMate's snippets features in Vim
+" Plug 'garbas/vim-snipmate'
+
+" The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
+" vim-snipmate default snippets
 Plug 'honza/vim-snippets'
 
 " Improved incremental searching for Vim
