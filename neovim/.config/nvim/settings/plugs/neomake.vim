@@ -7,6 +7,7 @@ autocmd! BufWritePost,BufEnter * Neomake
 let s:eslint_path = system('npm-which eslint')
 
 let g:neomake_vue_eslint_maker = {
+	\ 'exe': substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', ''),
 	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
 	\ '%W%f: line %l\, col %c\, Warning - %m',
 	\ 'args': ['--format', 'compact']
