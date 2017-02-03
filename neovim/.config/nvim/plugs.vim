@@ -11,262 +11,262 @@
 " +-+-+-+-+
 
 " This shit bugs my JS code
-" Plug 'sheerun/vim-polyglot'
+" call dein#add('sheerun/vim-polyglot')
 
 " css/less/sass/html color preview
-Plug 'gko/vim-coloresque'
+call dein#add('gko/vim-coloresque')
 
 " +-+
 " |C|
 " +-+
 "
 " Write and run programs. Insert statements, idioms, comments etc
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+call dein#add('vim-scripts/c.vim', {'on_ft': ['c', 'cpp']})
 
 " +-+-+-+
 " |C|S|S|
 " +-+-+-+
 
 " CSS3 syntax (and syntax defined in some foreign specifications)
-Plug 'hail2u/vim-css3-syntax'
+call dein#add('hail2u/vim-css3-syntax')
 
 " +-+-+-+
 " |C|S|V|
 " +-+-+-+
 
 " Handling column separated data
-Plug 'chrisbra/csv.vim', {'for': 'csv'}
+call dein#add('chrisbra/csv.vim', {'on_ft': 'csv'})
 
 " +-+-+-+-+-+-+
 " |E|l|i|x|i|r|
 " +-+-+-+-+-+-+
 
-Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+call dein#add('elixir-lang/vim-elixir', {'on_ft': 'elixir'})
 
-Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
+call dein#add('slashmili/alchemist.vim', {'on_ft': 'elixir'})
 
 " +-+-+-+
 " |E|l|m|
 " +-+-+-+
 
-Plug 'elmcast/elm-vim', {'for': 'elm'}
+call dein#add('elmcast/elm-vim', {'on_ft': 'elm'})
 
 " +-+-+-+-+-+-+-+
 " |H|a|s|k|e|l|l|
 " +-+-+-+-+-+-+-+
 
 " Custom Haskell Vimscripts
-Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+call dein#add('neovimhaskell/haskell-vim', {'on_ft': 'haskell'})
 
 " A completion plugin for Haskell, using ghc-mod
-Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+call dein#add('eagletmt/neco-ghc', {'on_ft': 'haskell'})
 
 " A collection of vimscripts for Haskell development.
-Plug 'dag/vim2hs', {'for': 'haskell'}
+call dein#add('dag/vim2hs', {'on_ft': 'haskell'})
 
 " +-+-+-+-+
 " |H|T|M|L|
 " +-+-+-+-+
 
 " HTML5 omnicomplete and syntax
-Plug 'othree/html5.vim'
+call dein#add('othree/html5.vim')
 
 " Provides support for expanding abbreviations similar to emmet
-Plug 'mattn/emmet-vim', {'for': ['html', 'vue', 'jsx']}
+call dein#add('mattn/emmet-vim', {'on_ft': ['html', 'vue', 'jsx']})
 
 " +-+-+-+-+
 " |J|S|O|N|
 " +-+-+-+-+
 
 " A better JSON for Vim
-Plug 'elzr/vim-json', {'for': 'json'}
+call dein#add('elzr/vim-json', {'on_ft': 'json'})
 
 " +-+-+-+-+-+-+-+-+
 " |M|a|r|k|d|o|w|n|
 " +-+-+-+-+-+-+-+-+
 
 " Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+call dein#add('plasticboy/vim-markdown', {'on_ft': 'markdown'})
 
 " +-+-+-+-+-+-+-+-+-+-+
 " |J|a|v|a|S|c|r|i|p|t|
 " +-+-+-+-+-+-+-+-+-+-+
 
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript', 'jsx', 'vue'] })
 
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('mxw/vim-jsx', { 'on_ft': ['javascript', 'jsx', 'vue'] })
 
-Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('1995eaton/vim-better-javascript-completion', { 'on_ft': ['javascript', 'jsx', 'vue'] })
 
 " Provides Tern-based JavaScript editing support
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('ternjs/tern_for_vim', { 'build': 'npm install -g tern', 'on_ft': ['javascript', 'jsx', 'vue'] })
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('carlitux/deoplete-ternjs', { 'build': 'npm install -g tern', 'on_ft': ['javascript', 'jsx', 'vue'] })
 
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'vue'] }
+call dein#add('othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'jsx', 'vue'] })
 
 " +-+-+-+-+
 " |T|m|u|x|
 " +-+-+-+-+
 
 " Vim plugin for tmux.conf
-Plug 'tmux-plugins/vim-tmux', {'for': 'tmux'}
+call dein#add('tmux-plugins/vim-tmux', {'on_ft': 'tmux'})
 
 " +-+-+-+
 " |V|u|e|
 " +-+-+-+
 
-Plug 'posva/vim-vue', {'for': 'vue'}
+call dein#add('posva/vim-vue', {'on_ft': 'vue'})
 
 " ╔╦╗┬┌─┐┌─┐
 " ║║║│└─┐│
 " ╩ ╩┴└─┘└─┘
 
 " Asynchronous linting and make framework
-Plug 'neomake/neomake'
+call dein#add('neomake/neomake')
 
 " Dark powered asynchronous completion framework
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+call dein#add('Shougo/deoplete.nvim', { 'build': ':UpdateRemotePlugins' })
 
 " Shows git diffs in the gutter
-Plug 'airblade/vim-gitgutter'
+call dein#add('airblade/vim-gitgutter')
 
-Plug 'mhinz/vim-signify'
+call dein#add('mhinz/vim-signify')
 
-Plug 'editorconfig/editorconfig-vim'
+call dein#add('editorconfig/editorconfig-vim')
 
 " Better whitespace highlighting for Vim
-Plug 'ntpeters/vim-better-whitespace'
+call dein#add('ntpeters/vim-better-whitespace')
 
-Plug 'sheerun/vim-polyglot'
+call dein#add('sheerun/vim-polyglot')
 
-Plug 'godlygeek/tabular'
+call dein#add('godlygeek/tabular')
 
-Plug 'wakatime/vim-wakatime'
+call dein#add('wakatime/vim-wakatime')
 
-Plug 'tpope/vim-fugitive'
+call dein#add('tpope/vim-fugitive')
 
-Plug 'MarcWeber/vim-addon-mw-utils'
+call dein#add('MarcWeber/vim-addon-mw-utils')
 
-Plug 'tomtom/tlib_vim'
+call dein#add('tomtom/tlib_vim')
 
-Plug 'takac/vim-hardtime'
+call dein#add('takac/vim-hardtime')
 
-Plug 'mattn/webapi-vim'
+call dein#add('mattn/webapi-vim')
 
 " Vim-gista is a plugin for manipulating Gist in Vim
-Plug 'lambdalisue/vim-gista'
+call dein#add('lambdalisue/vim-gista')
 
 " Ultimate undo history visualizer
-Plug 'mbbill/undotree'
+call dein#add('mbbill/undotree')
 
 " ╔╗╔┌─┐┬  ┬┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
 " ║║║├─┤└┐┌┘││ ┬├─┤ │ ││ ││││
 " ╝╚╝┴ ┴ └┘ ┴└─┘┴ ┴ ┴ ┴└─┘┘└┘
 
 " Motions
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'build': './install --all' })
 
-" Plug 'junegunn/fzf.vim'
+" call dein#add('junegunn/fzf.vim')
 
-Plug 'Shougo/denite.nvim'
+call dein#add('Shougo/denite.nvim')
 
-Plug 'easymotion/vim-easymotion'
+call dein#add('easymotion/vim-easymotion')
 
-Plug 'scrooloose/nerdtree'
+call dein#add('scrooloose/nerdtree')
 
 " Seamless navigation between tmux panes and vim splits
-Plug 'christoomey/vim-tmux-navigator'
+call dein#add('christoomey/vim-tmux-navigator')
 
-Plug 'kshenoy/vim-signature'
+call dein#add('kshenoy/vim-signature')
 
 " Windows
-"Plug 'ap/vim-buftabline'
-Plug 'romgrk/winteract.vim'
+"call dein#add('ap/vim-buftabline')
+call dein#add('romgrk/winteract.vim')
 
 " Tiled Window Management
-Plug 'spolu/dwm.vim'
+call dein#add('spolu/dwm.vim')
 
-Plug 'justincampbell/vim-eighties'
+call dein#add('justincampbell/vim-eighties')
 
-Plug 'vim-scripts/scrollfix'
+call dein#add('vim-scripts/scrollfix')
 
 " ╔╦╗┌─┐─┐ ┬┌┬┐
 "  ║ ├┤ ┌┴┬┘ │
 "  ╩ └─┘┴ └─ ┴
 
-Plug 'tpope/vim-surround'
+call dein#add('tpope/vim-surround')
 
 " Comment stuff out
-Plug 'tpope/vim-commentary'
+call dein#add('tpope/vim-commentary')
 
-Plug 'ReplaceWithRegister'
+call dein#add('ReplaceWithRegister')
 
-Plug 'christoomey/vim-titlecase'
+call dein#add('christoomey/vim-titlecase')
 
-Plug 'christoomey/vim-system-copy'
+call dein#add('christoomey/vim-system-copy')
 
-Plug 'michaeljsmith/vim-indent-object'
+call dein#add('michaeljsmith/vim-indent-object')
 
-Plug 'wellle/targets.vim'
+call dein#add('wellle/targets.vim')
 
-Plug 'jiangmiao/auto-pairs'
+call dein#add('jiangmiao/auto-pairs')
 
 " Concise vim script that implements some of TextMate's snippets features in Vim
-" Plug 'garbas/vim-snipmate'
+" call dein#add('garbas/vim-snipmate')
 
 " The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+call dein#add('SirVer/ultisnips')
 
 " vim-snipmate default snippets
-Plug 'honza/vim-snippets'
+call dein#add('honza/vim-snippets')
 
 " Improved incremental searching for Vim
-Plug 'haya14busa/incsearch.vim'
+call dein#add('haya14busa/incsearch.vim')
 
 " Visually select increasingly larger regions of text
-Plug 'terryma/vim-expand-region'
+call dein#add('terryma/vim-expand-region')
 
 " Open URI with your favorite browser from your most favorite editor
-Plug 'tyru/open-browser.vim'
+call dein#add('tyru/open-browser.vim')
 
 " ╔╦╗┬ ┬┌─┐┌┬┐┌─┐
 "  ║ ├─┤├┤ │││├┤
 "  ╩ ┴ ┴└─┘┴ ┴└─┘
 
-" Plug 'powerman/vim-plugin-AnsiEsc'
+" call dein#add('powerman/vim-plugin-AnsiEsc')
 
-Plug 'vim-airline/vim-airline'
+call dein#add('vim-airline/vim-airline')
 
-Plug 'vim-airline/vim-airline-themes'
+call dein#add('vim-airline/vim-airline-themes')
 
-Plug 'edkolev/tmuxline.vim'
+call dein#add('edkolev/tmuxline.vim')
 
-Plug 'ryanoasis/vim-devicons'
+call dein#add('ryanoasis/vim-devicons')
 
-" Plug 'tyrannicaltoucan/vim-quantum'
+" call dein#add('tyrannicaltoucan/vim-quantum')
 
-" Plug 'joshdick/onedark.vim'
+" call dein#add('joshdick/onedark.vim')
 
-" Plug 'morhetz/gruvbox' " pretty good
+" call dein#add('morhetz/gruvbox' " pretty good)
 
-" Plug 'mkarmona/colorsbox'
+" call dein#add('mkarmona/colorsbox')
 
-" Plug 'jyota/vimColors'
+" call dein#add('jyota/vimColors')
 
-" Plug 'fent/vim-frozen'
+" call dein#add('fent/vim-frozen')
 
-Plug 'kristijanhusak/vim-hybrid-material'
+call dein#add('kristijanhusak/vim-hybrid-material')
 
-" Plug 'crusoexia/vim-monokai'
+" call dein#add('crusoexia/vim-monokai')
 
-" Plug 'jacoborus/tender'
+" call dein#add('jacoborus/tender')
 
 " Underlines word under cursor
-Plug 'itchyny/vim-cursorword'
+call dein#add('itchyny/vim-cursorword')
 
 " Distraction-free writing in Vim
-Plug 'junegunn/goyo.vim'
+call dein#add('junegunn/goyo.vim')
 
 " Choose window to use, like tmux’s ‘display-pane’
-Plug 't9md/vim-choosewin'
+call dein#add('t9md/vim-choosewin')
