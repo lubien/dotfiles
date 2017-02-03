@@ -10,10 +10,3 @@ source ~/.config/nvim/settings/main.vim
 for setting in split(globpath('~/.config/nvim/settings/plugs', '*.vim'), '\n')
   exe 'source' setting
 endfor
-
-" Project specific `.nvimrc`
-:set exrc
-set secure
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1

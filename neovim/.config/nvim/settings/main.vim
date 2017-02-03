@@ -2,6 +2,12 @@
 "  ║ ├─┤├┤ │││├┤
 "  ╩ ┴ ┴└─┘┴ ┴└─┘
 
+" Project specific .nvimrc
+:set exrc
+
+" Secure external .nvimrc
+set secure
+
 " Color
 set t_Co=256
 
