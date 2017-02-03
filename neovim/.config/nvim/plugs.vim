@@ -146,13 +146,16 @@ call dein#add('wakatime/vim-wakatime')
 
 call dein#add('tpope/vim-fugitive')
 
-call dein#add('MarcWeber/vim-addon-mw-utils')
+" Interpret a file by function and cache file automatically
+" call dein#add('MarcWeber/vim-addon-mw-utils')
 
-call dein#add('tomtom/tlib_vim')
+" Some utility functions for vim
+" call dein#add('tomtom/tlib_vim')
 
-call dein#add('takac/vim-hardtime')
+" call dein#add('takac/vim-hardtime')
 
-call dein#add('mattn/webapi-vim')
+" Vim interface to Web API
+" call dein#add('mattn/webapi-vim')
 
 " Vim-gista is a plugin for manipulating Gist in Vim
 call dein#add('lambdalisue/vim-gista')
