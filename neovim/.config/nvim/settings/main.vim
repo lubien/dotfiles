@@ -20,8 +20,8 @@ syntax enable
 " I like knowing file types too
 filetype plugin indent on
 
-" Othe good ones are: quantum-mod, onedark, quantum
-colorscheme hybrid_material
+" Othe good ones are: hybrid_material, quantum-mod, onedark, quantum
+colorscheme gruvbox
 
 " Show relative line numbers except current
 :set number relativenumber

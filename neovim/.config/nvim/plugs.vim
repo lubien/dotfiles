@@ -14,7 +14,7 @@
 " call dein#add('sheerun/vim-polyglot')
 
 " css/less/sass/html color preview
-call dein#add('gko/vim-coloresque')
+call dein#add('gko/vim-coloresque', {'on_ft': ['css', 'sass', 'scss', 'vue']})
 
 " +-+
 " |C|
@@ -190,7 +190,7 @@ call dein#add('romgrk/winteract.vim')
 " Tiled Window Management
 call dein#add('spolu/dwm.vim')
 
-call dein#add('justincampbell/vim-eighties')
+" call dein#add('justincampbell/vim-eighties')
 
 call dein#add('vim-scripts/scrollfix')
 
@@ -251,7 +251,7 @@ call dein#add('ryanoasis/vim-devicons')
 
 " call dein#add('joshdick/onedark.vim')
 
-" call dein#add('morhetz/gruvbox' " pretty good)
+call dein#add('morhetz/gruvbox') " pretty good
 
 " call dein#add('mkarmona/colorsbox')
 
