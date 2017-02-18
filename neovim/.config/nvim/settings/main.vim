@@ -38,6 +38,10 @@ autocmd InsertLeave * :set relativenumber
 " Highlight cursor's current line and columns
 set cursorline cursorcolumn
 
+" Some plugin like vim-gitgutter depends on it
+" Default is 4 seconds, too large
+set updatetime=250
+
 " ╔╦╗┌─┐─┐ ┬┌┬┐
 "  ║ ├┤ ┌┴┬┘ │
 "  ╩ └─┘┴ └─ ┴
@@ -79,14 +83,14 @@ autocmd BufNewFile,BufRead *.vue set filetype=vue conceallevel=0
 " ║║║├─┤├─┘├─┘│││││ ┬└─┐
 " ╩ ╩┴ ┴┴  ┴  ┴┘└┘└─┘└─┘
 
-" Leader is ,
-let mapleader=','
+" Leader
+let mapleader="\<Space>"
 
 " Exit insert mode
-:imap ii <Esc>
+imap ii <Esc>
 
 " Refresh settings
-:nnoremap <S-R> :so ~/.config/nvim/init.vim<CR>
+nnoremap <S-R> :so ~/.config/nvim/init.vim<CR>
 
 " Install Plugs
 map <F12> :PlugInstall<CR>
@@ -96,8 +100,8 @@ nmap ; :
 
 " Clipboard
 noremap YY "+y<CR>
-noremap PP "+gP<CR>
-noremap XX "+x<CR>
+" noremap PP "+gP<CR>
+" noremap XX "+x<CR>
 
 " Fix scroll vertically when going up and down
 " :nnoremap j jzz
@@ -120,26 +124,33 @@ inoremap <down> <NOP>
 set mouse=
 
 " Persist visual after reindent
-vmap < <gv
-vmap > >gv
+" vmap < <gv
+" vmap > >gv
+
 
 " +-+-+-+-+-+-+
 " |B|u|f|f|e|r|
 " +-+-+-+-+-+-+
 
-" Delete buffer
-nnoremap <C-C> :bd<CR>
+" Write
+nnoremap <Leader>w :w<CR>
+" Close
+nnoremap <Leader>q :bd<CR>
 
 " +-+-+-+-+-+-+
 " |S|p|l|i|t|s|
 " +-+-+-+-+-+-+
 
 " Move between splits using Control as prefix
-:nnoremap <C-h> <C-\><C-n><C-w>h
-:nnoremap <C-j> <C-\><C-n><C-w>j
-:nnoremap <C-k> <C-\><C-n><C-w>k
-:nnoremap <C-l> <C-\><C-n><C-w>l
-"
+nnoremap <C-h> <C-\><C-n><C-w>h
+nnoremap <C-j> <C-\><C-n><C-w>j
+nnoremap <C-k> <C-\><C-n><C-w>k
+nnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <Leader>h <C-\><C-n><C-w>h
+nnoremap <Leader>j <C-\><C-n><C-w>j
+nnoremap <Leader>k <C-\><C-n><C-w>k
+nnoremap <Leader>l <C-\><C-n><C-w>l
+
 " Move between splits Clockwise
 nnoremap <C-x> <C-W>w
 

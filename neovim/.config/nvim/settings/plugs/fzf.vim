@@ -1,4 +1,4 @@
 " List files
-" map <C-p> :Files<CR>
+map <Leader>p :Files<CR>
 " List buffers
-" map <C-o> :Buffers<CR>
+map <Leader>b :Buffers<CR>
