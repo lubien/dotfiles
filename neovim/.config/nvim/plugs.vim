@@ -202,6 +202,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'vim-scripts/scrollfix'
 
+Plug 'rbgrouleff/bclose.vim'
+
 " ╔╦╗┌─┐─┐ ┬┌┬┐
 "  ║ ├┤ ┌┴┬┘ │
 "  ╩ └─┘┴ └─ ┴

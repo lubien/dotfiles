@@ -135,7 +135,7 @@ set mouse=
 " Write
 nnoremap <Leader>w :w<CR>
 " Close
-nnoremap <Leader>q :bd<CR>
+" nnoremap <Leader>q :<CR>
 
 " +-+-+-+-+-+-+
 " |S|p|l|i|t|s|
