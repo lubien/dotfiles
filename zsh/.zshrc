@@ -1,4 +1,3 @@
-source ~/.setup.zsh
 source ~/.vim/repos/github.com/morhetz/gruvbox/gruvbox_256palette.sh
 # Path to your oh-my-zsh installation.
 # export PATH='/usr/local/heroku/bin:/home/joao/.nvm/versions/node/v6.3.1/bin:/home/joao/bin:/home/joao/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/joao/.vim/repos/github.com/junegunn/fzf/bin':$PATH
@@ -65,6 +64,7 @@ plugins=(git, tmux, zsh-autosuggestions)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.setup.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -107,7 +107,7 @@ xmodmap -e "keycode 66 = F9" -e 'clear Lock'
 # I know zsh can do it, but I had issues.
 if [[ ! $TMUX ]];
 then
-	ts main
+	tmux new -s main
 	# nvim +qall
 	# tmux source-file ~/.tmux.conf
 fi
