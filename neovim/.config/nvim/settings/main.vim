@@ -33,8 +33,6 @@ colorscheme codedark
 " Show relative line numbers except current
 set number relativenumber
 
-autocmd VimEnter * :Tmuxline
-
 " Insert mode shows proper line numbers
 autocmd InsertEnter * :set norelativenumber
 
