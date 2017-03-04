@@ -9,7 +9,14 @@
 set secure
 
 " Color
-set t_Co=256
+" set t_Co=256
+
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " Dark Side (https://youtu.be/3xQmJ_vxHB4)
 set background=dark
@@ -20,11 +27,13 @@ syntax enable
 " I like knowing file types too
 filetype plugin indent on
 
-" Othe good ones are: hybrid_material, quantum-mod, onedark, quantum
-colorscheme gruvbox
+" Othe good ones are: hybrid_material, quantum-mod, onedark, quantum, gruvbox
+colorscheme codedark
 
 " Show relative line numbers except current
-:set number relativenumber
+set number relativenumber
+
+autocmd VimEnter * :Tmuxline
 
 " Insert mode shows proper line numbers
 autocmd InsertEnter * :set norelativenumber
@@ -33,10 +42,11 @@ autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
 " Shows whitespaces
-:set list
+set list
 
 " Highlight cursor's current line and columns
-set cursorline cursorcolumn
+" set cursorline cursorcolumn
+set cursorline
 
 " Some plugin like vim-gitgutter depends on it
 " Default is 4 seconds, too large

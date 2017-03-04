@@ -264,6 +264,12 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'morhetz/gruvbox' " pretty good
 
+Plug 'tomasiser/vim-code-dark'
+
+Plug 'albertorestifo/github.vim'
+
+Plug 'zanglg/nova.vim'
+
 " Plug 'mkarmona/colorsbox'
 
 " Plug 'jyota/vimColors'
