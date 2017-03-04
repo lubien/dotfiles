@@ -108,6 +108,5 @@ xmodmap -e "keycode 66 = F9" -e 'clear Lock'
 if [[ ! $TMUX ]];
 then
 	tmux new -s main
-	nvim +Tmuxline +qall
 	# tmux source-file ~/.tmux.conf
 fi
