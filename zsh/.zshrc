@@ -54,7 +54,7 @@ ZSH_THEME="wedisagree-mod" #miloshadzic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git, tmux)
-plugins=(git, tmux, zsh-autosuggestions)
+plugins=(git, tmux, zsh-autosuggestions, almostontop)
 
 # User configuration
 
