@@ -1,4 +1,5 @@
 # Navigation
+alias fd='cd $(loc-dir)'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -16,7 +17,7 @@ alias t5='tree -L 5'
 
 # Useful
 alias n='nvim'
-alias e='nvim $(fzf)'
+alias e='nvim $(loc-file)'
 alias c='clear'
 alias ll='ls -la'
 alias l.='ls -d .*'

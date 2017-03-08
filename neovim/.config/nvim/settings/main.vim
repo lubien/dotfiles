@@ -15,7 +15,7 @@ set secure
 
 " Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
- set termguicolors
+ " set termguicolors
 endif
 
 " Dark Side (https://youtu.be/3xQmJ_vxHB4)
