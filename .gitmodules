@@ -1,6 +1,6 @@
-[submodule "zsh/.oh-my-zsh/plugins/almostontop"]
-	path = zsh/.oh-my-zsh/plugins/almostontop
+[submodule "zsh/.oh-my-zsh/custom/plugins/almostontop"]
+	path = zsh/.oh-my-zsh/custom/plugins/almostontop
 	url = https://github.com/Valiev/almostontop
-[submodule "zsh/.oh-my-zsh/plugins/zsh-autosuggestions"]
-	path = zsh/.oh-my-zsh/plugins/zsh-autosuggestions
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions

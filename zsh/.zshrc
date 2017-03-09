@@ -49,12 +49,7 @@ ZSH_THEME="wedisagree-mod" #miloshadzic"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git, tmux)
-plugins=(git, tmux, zsh-autosuggestions, almostontop)
+plugins=(git, tmux, almostontop)
 
 # User configuration
 
@@ -64,6 +59,7 @@ plugins=(git, tmux, zsh-autosuggestions, almostontop)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.setup.zsh
 
 # You may need to manually set your language environment
