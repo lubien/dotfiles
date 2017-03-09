@@ -36,7 +36,12 @@ main() {
 	zparseopts -D -K -E p:=o_path h:=o_height
 
 	local cmd=(
-		find . -type d
+		find .
+		-type d
+		! -path '*/_build/*'
+		! -path '*/deps*'
+		! -path '*/.git*'
+		! -path '*/node_modules/*'
 	)
 
 	local fzf=(
