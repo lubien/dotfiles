@@ -1,4 +1,5 @@
 # Navigation
+alias fd='cd `loc-dir`'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -56,16 +57,16 @@ alias acemr='ace migration:refresh && ace db:seed'
 # Moar useful stuff
 
 # Fuzzy change dir
-fd_function() {
-	dir=`loc-dir`
+# fd_function() {
+# 	dir=`loc-dir`
 
-	if [ $dir ]
-	then
-		cd $dir
-	fi
-}
+# 	if [ $dir ]
+# 	then
+# 		cd $dir
+# 	fi
+# }
 
-alias fd=fd_function
+# alias fd=fd_function
 
 # `up N` goes N dirs up
 up_function() {

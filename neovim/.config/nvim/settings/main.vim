@@ -43,8 +43,8 @@ autocmd InsertLeave * :set relativenumber
 set list
 
 " Highlight cursor's current line and columns
-" set cursorline cursorcolumn
-set cursorline
+set cursorline cursorcolumn
+" set cursorline
 
 " Some plugin like vim-gitgutter depends on it
 " Default is 4 seconds, too large
@@ -148,6 +148,15 @@ nnoremap <Leader>w :w<CR>
 " +-+-+-+-+-+-+
 " |S|p|l|i|t|s|
 " +-+-+-+-+-+-+
+
+" Make splits
+nnoremap <Leader>sp :sp<CR>
+nnoremap <Leader>vsp :vsp<CR>
+
+" Resize splits
+" nnoremap <Leader>sfv <C-w>_
+" nnoremap <Leader>sfh <C-w>|
+nnoremap <Leader>ssr <C-w>=
 
 " Move between splits using Control as prefix
 nnoremap <C-h> <C-\><C-n><C-w>h
