@@ -233,7 +233,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
 
 " vim-snipmate default snippets
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Improved incremental searching for Vim
 " Plug 'haya14busa/incsearch.vim'
