@@ -14,14 +14,14 @@
 " Plug 'sheerun/vim-polyglot'
 
 " css/less/sass/html color preview
-Plug 'gko/vim-coloresque', {'for': ['css', 'sass', 'scss', 'vue']}
+" Plug 'gko/vim-coloresque', {'for': ['css', 'sass', 'scss', 'vue']}
 
 " +-+
 " |C|
 " +-+
 "
 " Write and run programs. Insert statements, idioms, comments etc
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+" Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 
 " +-+-+-+
 " |C|S|S|
@@ -69,7 +69,7 @@ Plug 'dag/vim2hs', {'for': 'haskell'}
 " +-+-+-+-+
 
 " HTML5 omnicomplete and syntax
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim', {'for': ['html', 'vue', 'jsx']}
 
 " Provides support for expanding abbreviations similar to emmet
 Plug 'mattn/emmet-vim', {'for': ['html', 'vue', 'jsx']}
@@ -94,9 +94,9 @@ Plug 'elzr/vim-json', {'for': 'json'}
 
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'jsx', 'vue'] }
+Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 
-Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
+" Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
 
 " Provides Tern-based JavaScript editing support
 " Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
@@ -200,7 +200,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'justincampbell/vim-eighties'
 
-Plug 'vim-scripts/scrollfix'
+" Plug 'vim-scripts/scrollfix'
 
 Plug 'rbgrouleff/bclose.vim'
 
@@ -256,11 +256,13 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Plug 'edkolev/tmuxline.vim'
 
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " Plug 'tyrannicaltoucan/vim-quantum'
 
 " Plug 'joshdick/onedark.vim'
+
+Plug 'rakr/vim-one'
 
 Plug 'morhetz/gruvbox' " pretty good
 

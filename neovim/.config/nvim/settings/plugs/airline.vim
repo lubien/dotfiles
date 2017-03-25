@@ -4,6 +4,6 @@
 let g:airline#extensions#tabline#enabled = 1
 
 " Other good ones are: tender, luna, cobalt2
-let g:airline_theme='hybrid'
+let g:airline_theme='one'
 
 let g:airline_powerline_fonts = 1

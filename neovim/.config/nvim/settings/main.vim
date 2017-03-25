@@ -8,15 +8,16 @@
 " Secure external .nvimrc
 set secure
 
+if (has("nvim"))
+	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+
 " Color
 " set t_Co=256
-
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-" Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- " set termguicolors
-endif
 
 " Dark Side (https://youtu.be/3xQmJ_vxHB4)
 set background=dark
@@ -28,7 +29,7 @@ syntax enable
 filetype plugin indent on
 
 " Othe good ones are: hybrid_material, quantum-mod, onedark, quantum, gruvbox
-colorscheme codedark
+colorscheme one
 
 " Show relative line numbers except current
 set number relativenumber

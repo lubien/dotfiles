@@ -21,5 +21,5 @@ fi
 
 # Key bindings
 # ------------
-source "/home/joao/.fzf/shell/key-bindings.zsh"
+source ~/.fzf/shell/key-bindings.zsh
 
