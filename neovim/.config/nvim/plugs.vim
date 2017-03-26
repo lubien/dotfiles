@@ -181,7 +181,7 @@ Plug 'junegunn/fzf.vim'
 
 " Plug 'Shougo/denite.nvim'
 
-" Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 Plug 'scrooloose/nerdtree'
 

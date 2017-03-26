@@ -1,1 +1,1 @@
-nmap  -  <Plug>(choosewin)
+nmap <Leader>wg <Plug>(choosewin)

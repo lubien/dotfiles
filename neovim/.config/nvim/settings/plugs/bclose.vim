@@ -1,1 +1,1 @@
-nnoremap <Leader>q :Bclose<CR>
+" nnoremap <Leader>q :Bclose<CR>

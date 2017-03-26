@@ -1,4 +1,6 @@
 " List files
-map <Leader>p :Files<CR>
+nnoremap <Leader>ff :Files<CR>
 " List buffers
-map <Leader>b :Buffers<CR>
+nnoremap <Leader>bf :Buffers<CR>
+" List windows
+nnoremap <Leader>wf :Windows<CR>
