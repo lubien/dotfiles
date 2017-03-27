@@ -244,6 +244,12 @@ Plug 'terryma/vim-expand-region'
 " Open URI with your favorite browser from your most favorite editor
 Plug 'tyru/open-browser.vim'
 
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Simple indentation guides for your buffers
+" Plug 'thaerkh/vim-indentguides'
+
 " ╔╦╗┬ ┬┌─┐┌┬┐┌─┐
 "  ║ ├─┤├┤ │││├┤
 "  ╩ ┴ ┴└─┘┴ ┴└─┘
