@@ -10,6 +10,9 @@ imap ii <Esc>
 imap jj <Esc>
 imap jk <Esc>
 
+" Close all
+nnoremap <Leader>qa :qa<CR>
+
 " Refresh settings
 nnoremap <S-R> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>fR :so ~/.config/nvim/init.vim<CR>

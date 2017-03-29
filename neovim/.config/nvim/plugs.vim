@@ -69,10 +69,10 @@ Plug 'dag/vim2hs', {'for': 'haskell'}
 " +-+-+-+-+
 
 " HTML5 omnicomplete and syntax
-Plug 'othree/html5.vim', {'for': ['html', 'vue', 'jsx']}
+" Plug 'othree/html5.vim', {'for': ['html', 'vue', 'javascript.jsx']}
 
 " Provides support for expanding abbreviations similar to emmet
-Plug 'mattn/emmet-vim', {'for': ['html', 'vue', 'jsx']}
+" Plug 'mattn/emmet-vim', {'for': ['html', 'vue', 'javascript.jsx']}
 
 " +-+-+-+-+
 " |J|S|O|N|
@@ -92,16 +92,16 @@ Plug 'elzr/vim-json', {'for': 'json'}
 " |J|a|v|a|S|c|r|i|p|t|
 " +-+-+-+-+-+-+-+-+-+-+
 
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'vue'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
-Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
 
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
 
 " Provides Tern-based JavaScript editing support
 " Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'jsx', 'vue'] }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'vue'] }
 
@@ -169,6 +169,9 @@ Plug 'lambdalisue/vim-gista'
 
 " Ultimate undo history visualizer
 " Plug 'mbbill/undotree'
+
+" Automated Vim session management and file auto-save
+Plug 'thaerkh/vim-workspace'
 
 " ╔╗╔┌─┐┬  ┬┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
 " ║║║├─┤└┐┌┘││ ┬├─┤ │ ││ ││││
