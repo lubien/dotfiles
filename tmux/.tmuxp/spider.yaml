@@ -1,0 +1,23 @@
+session_name: spider
+windows:
+
+- window_name: Editor
+  focus: 'true'
+  start_directory: ~/dev/spider
+  layout: d042,136x39,0,0,5
+  panes:
+  - focus: 'true'
+    shell_command: nvim
+
+- window_name: Server
+  start_directory: ~/dev/spider
+  layout: ca08,136x39,0,0{68x39,0,0,6,67x39,69,0[67x19,69,0,7,67x19,69,20,8]}
+  panes:
+  - focus: 'true'
+    shell_command: git status
+
+  - shell_command:
+    - yarn run dev
+
+  - shell_command:
+    - #

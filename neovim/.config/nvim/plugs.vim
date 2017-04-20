@@ -11,10 +11,12 @@
 " +-+-+-+-+
 
 " This shit bugs my JS code
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " css/less/sass/html color preview
 " Plug 'gko/vim-coloresque', {'for': ['css', 'sass', 'scss', 'vue']}
+
+Plug 'powerman/vim-plugin-AnsiEsc'
 
 " +-+
 " |C|
@@ -28,7 +30,7 @@
 " +-+-+-+
 
 " CSS3 syntax (and syntax defined in some foreign specifications)
-Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
+" Plug 'hail2u/vim-css3-syntax', {'for': 'css'}
 
 " +-+-+-+
 " |C|S|V|
@@ -41,7 +43,7 @@ Plug 'chrisbra/csv.vim', {'for': 'csv'}
 " |E|l|i|x|i|r|
 " +-+-+-+-+-+-+
 
-Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+" Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 
@@ -49,20 +51,20 @@ Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 " |E|l|m|
 " +-+-+-+
 
-Plug 'elmcast/elm-vim', {'for': 'elm'}
+" Plug 'elmcast/elm-vim', {'for': 'elm'}
 
 " +-+-+-+-+-+-+-+
 " |H|a|s|k|e|l|l|
 " +-+-+-+-+-+-+-+
 
 " Custom Haskell Vimscripts
-Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+" Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
 " A completion plugin for Haskell, using ghc-mod
-Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
+" Plug 'eagletmt/neco-ghc', {'for': 'haskell'}
 
 " A collection of vimscripts for Haskell development.
-Plug 'dag/vim2hs', {'for': 'haskell'}
+" Plug 'dag/vim2hs', {'for': 'haskell'}
 
 " +-+-+-+-+
 " |H|T|M|L|
@@ -79,7 +81,7 @@ Plug 'dag/vim2hs', {'for': 'haskell'}
 " +-+-+-+-+
 
 " A better JSON for Vim
-Plug 'elzr/vim-json', {'for': 'json'}
+" Plug 'elzr/vim-json', {'for': 'json'}
 
 " +-+-+-+-+-+-+-+-+
 " |M|a|r|k|d|o|w|n|
@@ -92,9 +94,9 @@ Plug 'elzr/vim-json', {'for': 'json'}
 " |J|a|v|a|S|c|r|i|p|t|
 " +-+-+-+-+-+-+-+-+-+-+
 
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
+" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'vue'] }
 
-Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
+" Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
 
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'jsx', 'vue'] }
 
@@ -110,13 +112,13 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
 " +-+-+-+-+
 
 " Vim plugin for tmux.conf
-Plug 'tmux-plugins/vim-tmux', {'for': 'tmux'}
+" Plug 'tmux-plugins/vim-tmux', {'for': 'tmux'}
 
 " +-+-+-+
 " |V|u|e|
 " +-+-+-+
 
-Plug 'posva/vim-vue', {'for': 'vue'}
+" Plug 'posva/vim-vue', {'for': 'vue'}
 
 " ╔╦╗┬┌─┐┌─┐
 " ║║║│└─┐│
@@ -248,10 +250,13 @@ Plug 'terryma/vim-expand-region'
 Plug 'tyru/open-browser.vim'
 
 " A Vim plugin for visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 
 " Simple indentation guides for your buffers
 " Plug 'thaerkh/vim-indentguides'
+
+" Display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
 
 " ╔╦╗┬ ┬┌─┐┌┬┐┌─┐
 "  ║ ├─┤├┤ │││├┤

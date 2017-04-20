@@ -23,6 +23,7 @@ alias ll='ls -la'
 alias l.='ls -d .*'
 alias refresh='source ~/.zshrc'
 alias sagi='sudo apt-get install'
+alias pac='sudo pacman -S'
 
 # Git
 alias gis='git s'
@@ -38,11 +39,12 @@ alias tmuxc='nvim ~/.tmux.conf'
 alias devf='cd ~/dev'
 alias dotf='cd ~/dotfiles'
 
-# TMux
+# tmux
 alias tmuxr='tmux source-file ~/.tmux.conf'
 alias tmuxn='tmux new -s'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux ls'
+alias tl='tmuxp load -y'
 
 # Vagrant
 alias vup='vagrant up'

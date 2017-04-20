@@ -1,3 +1,4 @@
 # `compiuter is named after a brazilian joke
 
-gcc ./$1.c -o ./$1 && ./$1
+# -Werror
+gcc ./$1.c -lm -std=c11 -Wall -pedantic -o out.o && ./out.o

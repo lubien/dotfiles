@@ -1,0 +1,11 @@
+session_name: dotfiles
+windows:
+  - window_name: Editor
+    start_directory: ~/dotfiles
+    panes:
+      - nvim
+
+  - window_name: Playground
+    start_directory: ~/dotfiles
+    panes:
+      - echo Tests

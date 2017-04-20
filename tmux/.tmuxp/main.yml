@@ -1,0 +1,5 @@
+session_name: main
+windows:
+  - window_name: Main
+    panes:
+      - #

@@ -9,7 +9,7 @@
 set secure
 
 if (has("nvim"))
-	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 if (has("termguicolors"))
@@ -44,7 +44,7 @@ autocmd InsertLeave * :set relativenumber
 set list
 
 " Highlight cursor's current line and columns
-set cursorline cursorcolumn
+" set cursorline cursorcolumn
 " set cursorline
 
 " Some plugin like vim-gitgutter depends on it
@@ -70,20 +70,36 @@ set colorcolumn=80
 " Break lines after 80 columns
 set textwidth=80
 
-" My tabs indent settings
-set tabstop=2
+" .editorconfig-less projects made me use 2 spaces by default :/
+" set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set noexpandtab
+set expandtab
+" set noexpandtab
 
 " Ninja buffers
 set hidden
 
 " Remember cursor last position
 augroup vimrc-remember-cursor-position
-  autocmd!
-  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+	autocmd!
+	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
+
+" Highlight search results
+set hlsearch
+
+" Incremental search, search as you type
+set incsearch
+
+" Ignore case when searching
+set ignorecase
+
+" Ignore case when searching lowercase
+set smartcase
+
+" Stop highlighting on Enter
+map <CR> :noh<CR>
 
 " Vue filetype is "vue.html.javascript.css" which Neomake can't lint
 autocmd BufNewFile,BufRead *.vue set filetype=vue conceallevel=0
