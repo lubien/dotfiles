@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# sudo systemctl start samda.service
+sudo systemctl start nmbd
+sudo systemctl start smbd
