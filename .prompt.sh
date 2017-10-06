@@ -18,7 +18,7 @@ __powerline() {
     SYMBOL_GIT_PULL='↓'
 
     if [[ -z "$PS_SYMBOL" ]]; then
-      if [ -n $SSH_CONNECTION ]; then
+      if [[ -n $SSH_CONNECTION ]]; then
         case "$(uname)" in
             Darwin)   PS_SYMBOL='⌘';;
             Linux)    PS_SYMBOL='❖';;
