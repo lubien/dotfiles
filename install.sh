@@ -31,10 +31,10 @@ export NVM_DIR="$HOME/.nvm"
 if [ ! -d $NVM_DIR ]; then
   echo "Installing nvm"
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-  # refresh env.sh to source nvm
-  source ~/.env.sh
 fi
 
+# refresh env.sh to source nvm
+source ~/.env.sh
 
 # download a nodejs version
 if ! hash node 2>/dev/null; then
