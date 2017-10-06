@@ -1,5 +1,5 @@
 # Hidden stuff
-[[ -f ~/secret.sh ]] && . ~/secret.sh
+[[ -f ~/.secret.sh ]] && . ~/.secret.sh
 
 # fzf config
 [[ -f ~/.fzf.sh ]] && . ~/.fzf.sh
