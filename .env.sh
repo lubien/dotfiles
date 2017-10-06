@@ -9,7 +9,7 @@ BASE16_SHELL="$HOME/.config/oceanic-next-shell/oceanic-next.dark.sh"
 
 export TERM=xterm-256color
 
-export NVM_DIR="/home/$USER/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 DEFAULT_USER=`whoami`

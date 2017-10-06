@@ -1,75 +1,55 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# git
-if ! hash git 2>/dev/null; then
-  echo "Installing git";
-  sudo apt-get install git
-else
-  echo "Git already installed";
+echo "Installing packages"
+
+sudo pacman -S --needed --noconfirm \
+  awesome \
+  xterm \
+  yaourt \
+  fzf \
+  ripgrep \
+  tmux \
+  neovim \
+  elixir
+
+yaourt -S --needed --noconfirm \
+  lain \
+  awesome-freedesktop \
+  tree \
+  dropbox \
+  firefox-developer \
+  ranger
+
+# tmux plugin manager
+TPM_DIR=~/.tmux/plugins/tpm
+if [ ! -d $TPM_DIR ]; then
+  echo "Installing tmux plugin manager"
+  git clone https://github.com/tmux-plugins/tpm $TPM_DIR
 fi
 
-# fzf
-if ! hash fzf 2>/dev/null; then
-  # the silver searcher is a dependency to stuff I do
-  sudo apt-get install silversearcher-ag
-
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
-else
-  echo "fzf already installed";
+export NVM_DIR="$HOME/.nvm"
+if [ ! -d $NVM_DIR ]; then
+  echo "Installing nvm"
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+  # refresh env.sh to source nvm
+  source ~/.env.sh
 fi
 
-# neovim
-if ! hash nvim 2>/dev/null; then
-  sudo apt-get install software-properties-common
-  sudo add-apt-repository ppa:neovim-ppa/unstable
-  sudo apt-get update
-  sudo apt-get install neovim
 
-  # oceanic-next-shell
-  git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
-
-  # vim-plug
-  curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  nvim +PlugInstall +qall
-else
-  echo "nvim already installed";
+# download a nodejs version
+if ! hash node 2>/dev/null; then
+  echo "Installing NodeJS"
+  nvm install 8
+  nvm use 8
 fi
 
-# tmux
-if ! hash tmux 2>/dev/null; then
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  sudo apt-get install tmux
-else
-  echo "tmux already installed";
-fi
+# node global modules
+echo "Installing NodeJS useful global modules"
+npm i -g \
+  vue-cli \
+  eslint \
+  http-server
 
-# stow
-if ! hash stow 2>/dev/null; then
-  sudo apt-get install stow
-else
-  echo "stow already installed";
-fi
-
-if hash zsh 2>/dev/null; then
-  echo "zsh already installed";
-else
-  sudo apt-get install zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  chsh -s $(which zsh)
-
-  # Powerline fonts
-  wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-  wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-  mkdir ~/.fonts
-  mv PowerlineSymbols.otf ~/.fonts/
-  mkdir -p ~/.config/fontconfig/conf.d
-  fc-cache -vf ~/.fonts/
-  mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-fi
-
-stow bin
-stow git
-stow neovim
-stow zsh
-stow tmux
+# refresh env.sh once again to
+# source nvm global node_modules binaries
+source ~/.env.sh
