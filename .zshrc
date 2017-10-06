@@ -93,7 +93,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Env variables
-source ~/.env.zsh
+source ~/.env.sh
 
 # Aliases
 source ~/aliases.sh
