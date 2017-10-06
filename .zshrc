@@ -1,8 +1,5 @@
 # source ~/.vim/repos/github.com/morhetz/gruvbox/gruvbox_256palette.sh
 
-# Disable Tmux rename panes
-export DISABLE_AUTO_TITLE='true'
-
 export PATH="$HOME/.yarn/bin:$PATH"
 # Path to your oh-my-zsh installation.
 # export PATH='/usr/local/heroku/bin:/home/joao/.nvm/versions/node/v6.3.1/bin:/home/joao/bin:/home/joao/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/joao/.vim/repos/github.com/junegunn/fzf/bin':$PATH

@@ -20,11 +20,11 @@ alias t5='tree -L 5'
 
 # Useful
 alias n='nvim'
-alias e='${EDITOR} $(loc-file)'
+alias e='${EDITOR} $(fzf)'
 alias c='clear'
 alias ll='ls -la'
 alias l.='ls -d .*'
-alias refresh='source ~/.zshrc'
+alias refresh='source ~/.bashrc'
 alias sagi='sudo apt-get install'
 alias pac='sudo pacman -S'
 

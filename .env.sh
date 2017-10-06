@@ -1,7 +1,10 @@
 # Hidden stuff
-source ~/.secret.zsh
+[[ -f ~/secret.sh ]] && . ~/secret.sh
 
-BASE16_SHELL="$HOME/.config/oceanic-next-shell/oceanic-next.dark.sh" 
+# fzf config
+[[ -f ~/.fzf.sh ]] && . ~/.fzf.sh
+
+BASE16_SHELL="$HOME/.config/oceanic-next-shell/oceanic-next.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export TERM=xterm-256color
@@ -13,7 +16,11 @@ DEFAULT_USER=`whoami`
 
 # Add ~/bin to path
 export PATH="$HOME/bin:$PATH"
-# Use colors in Visionmedia's debbuger
+
+# Disable tmux rename panes
+export DISABLE_AUTO_TITLE='true'
+
+# Use colors in Visionmedia's debugger
 # See: https://github.com/visionmedia/debug/blob/master/node.js#L45
 export DEBUG_COLORS=1
 
