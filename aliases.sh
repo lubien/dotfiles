@@ -1,6 +1,10 @@
 # dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
+# ssh
+alias pc='ssh lubien@$PC -p $PC_PORT'
+alias notebook='ssh lubien@$NOTE -p $NOTE_PORT'
+
 # Navigation
 alias fd='cd `loc-dir`'
 alias ..='cd ..'
