@@ -19,73 +19,73 @@ autoload -Uz colors; colors
 ret=()
 
 empty() {
-	return $#
+  return $#
 }
 
 zslice() {
-	local args=("${(@s.:.)1}"); shift
-	local start=${args[1]:-1} stop=${args[2]:-$#} stride=${args[3]:-1}
+  local args=("${(@s.:.)1}"); shift
+  local start=${args[1]:-1} stop=${args[2]:-$#} stride=${args[3]:-1}
 
-	ret=()
-	local i
-	for (( i=$start; i <= $stop; i+=$stride )) ; do
-		ret+=("${argv[$i]}")
-	done
+  ret=()
+  local i
+  for (( i=$start; i <= $stop; i+=$stride )) ; do
+    ret+=("${argv[$i]}")
+  done
 }
 
 main() {
-	local o_path=() o_height=()
-	zparseopts -D -K -E p:=o_path h:=o_height
+  local o_path=() o_height=()
+  zparseopts -D -K -E p:=o_path h:=o_height
 
-	local cmd=(
-		ag
-		-g "."
-		--nocolor
-		-0
-	)
+  local cmd=(
+    ag
+    -g "."
+    --nocolor
+    -0
+  )
 
-	local fzf=(
-		$(which fzf)
-		--header="$cmd"
-		--inline-info
-		--tabstop=4
-		--read0  # null-char delim
+  local fzf=(
+    $(which fzf)
+    --header="$cmd"
+    --inline-info
+    --tabstop=4
+    --read0  # null-char delim
 
-		--ansi
+    --ansi
 
-		--preview
-			'
-			autoload -Uz colors; colors
-			text() { pygmentize -O style=monokai -f console256 -g "$1" || cat "$1"; };
-			bin() { hexdump -C "$1"; }
-			f() { if file -bi "$1" | grep "charset=binary" >/dev/null; then bin "$1"; else text "$1"; fi; }
-			d() { ls -ldI "$1" ; tree -C "$1"; };
-			p() {
-				echo "${fg_bold[blue]}base:${reset_color} ${1##*/}";
-				echo "${fg_bold[blue]}path${reset_color} ${1%/*}";
-				echo -n "${fg_bold[blue]}type${reset_color} "; file -b "$1";
-				echo "---";
-				if [[ -d "$1" ]]; then
-					d "$1";
-				else
-					f "$1";
-				fi;
-			};
-			p {} | head -n 100
-			'
+    --preview
+      '
+      autoload -Uz colors; colors
+      text() { pygmentize -O style=monokai -f console256 -g "$1" || cat "$1"; };
+      bin() { hexdump -C "$1"; }
+      f() { if file -bi "$1" | grep "charset=binary" >/dev/null; then bin "$1"; else text "$1"; fi; }
+      d() { ls -ldI "$1" ; tree -C "$1"; };
+      p() {
+        echo "${fg_bold[blue]}base:${reset_color} ${1##*/}";
+        echo "${fg_bold[blue]}path${reset_color} ${1%/*}";
+        echo -n "${fg_bold[blue]}type${reset_color} "; file -b "$1";
+        echo "---";
+        if [[ -d "$1" ]]; then
+          d "$1";
+        else
+          f "$1";
+        fi;
+      };
+      p {} | head -n 100
+      '
 
-		--bind 'ctrl-x:execute:$EDITOR {}'
-		--bind 'ctrl-p:execute:$PAGER {}'
-		--bind 'ctrl-h:execute:hexdump -C {}; read'
-		--bind 'ctrl-b:execute:binwalk {}; read'
-		--bind 'ctrl-u:execute:du -hsc {}; read'
-		--bind 'ctrl-t:execute:sha1sum {}; read'
-		--bind 'ctrl-g:execute:md5sum {}; read'
-	)
+    --bind 'ctrl-x:execute:$EDITOR {}'
+    --bind 'ctrl-p:execute:$PAGER {}'
+    --bind 'ctrl-h:execute:hexdump -C {}; read'
+    --bind 'ctrl-b:execute:binwalk {}; read'
+    --bind 'ctrl-u:execute:du -hsc {}; read'
+    --bind 'ctrl-t:execute:sha1sum {}; read'
+    --bind 'ctrl-g:execute:md5sum {}; read'
+  )
 
-	empty $o_height || fzf+=(--height ${o_height[-1]})
+  empty $o_height || fzf+=(--height ${o_height[-1]})
 
-	$cmd | $fzf
+  $cmd | $fzf
 }
 
 main "$@"

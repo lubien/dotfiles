@@ -108,12 +108,12 @@ source ~/aliases.sh
 # I know zsh can do it, but I had issues.
 # if [[ ! $TMUX ]];
 # then
-# 	# export TERM=xterm-256color
-# 	# tmux new -s main
-# 	# tmuxp load main
-# 	# tmux source-file ~/.tmux.conf
+#   # export TERM=xterm-256color
+#   # tmux new -s main
+#   # tmuxp load main
+#   # tmux source-file ~/.tmux.conf
 # else
-# 	# export TERM=screen-256color
+#   # export TERM=screen-256color
 # fi
 
 export NVM_DIR="$HOME/.nvm"

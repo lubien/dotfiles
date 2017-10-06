@@ -62,12 +62,12 @@ alias acemr='ace migration:refresh && ace db:seed'
 
 # Fuzzy change dir
 # fd_function() {
-# 	dir=`loc-dir`
+#   dir=`loc-dir`
 
-# 	if [ $dir ]
-# 	then
-# 		cd $dir
-# 	fi
+#   if [ $dir ]
+#   then
+#     cd $dir
+#   fi
 # }
 
 # alias fd=fd_function
@@ -83,31 +83,31 @@ alias up=up_function
 
 # Makes a dir and cd into it
 mk_function() {
-	if [ $1 ]
-	then
-		mkdir $1
-		cd $1
-	fi
+  if [ $1 ]
+  then
+    mkdir $1
+    cd $1
+  fi
 }
 
 alias mk=mk_function
 
 # Git clone then cd
 clone_function() {
-	if [ $1 ]
-	then
-		full=$1
-		if [ $2 ]
-		then
-			reponame=$2
-		else
-			with_dot_git="${full##*/}"
-			reponame="${with_dot_git%.*}"
-		fi
+  if [ $1 ]
+  then
+    full=$1
+    if [ $2 ]
+    then
+      reponame=$2
+    else
+      with_dot_git="${full##*/}"
+      reponame="${with_dot_git%.*}"
+    fi
 
-		git clone $full $reponame
-		cd $reponame
-	fi
+    git clone $full $reponame
+    cd $reponame
+  fi
 }
 
 alias clone=clone_function
@@ -116,19 +116,19 @@ alias clone=clone_function
 alias bkm='bookmarker -i People -i Orders -i Templates -i Books/Rainobe -i Containers -i Fandom -i Markets'
 
 publish_bookmarks_function() {
-	cwd=`pwd`
+  cwd=`pwd`
 
-	cd ~/dev/bookmarks
-	bkm -o ~/dev/bookmarks/README.md
+  cd ~/dev/bookmarks
+  bkm -o ~/dev/bookmarks/README.md
 
-	rm -rf .git
-	git init
-	git add .
-	git cm "Generated"
-	git remote add origin git@github.com:lubien/bookmarks.git
-	gp origin master -f # here are demons
+  rm -rf .git
+  git init
+  git add .
+  git cm "Generated"
+  git remote add origin git@github.com:lubien/bookmarks.git
+  gp origin master -f # here are demons
 
-	cd $cwd
+  cd $cwd
 }
 
 alias publish-bookmarks=publish_bookmarks_function

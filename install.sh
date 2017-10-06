@@ -2,70 +2,70 @@
 
 # git
 if ! hash git 2>/dev/null; then
-	echo "Installing git";
-	sudo apt-get install git
+  echo "Installing git";
+  sudo apt-get install git
 else
-	echo "Git already installed";
+  echo "Git already installed";
 fi
 
 # fzf
 if ! hash fzf 2>/dev/null; then
-	# the silver searcher is a dependency to stuff I do
-	sudo apt-get install silversearcher-ag
+  # the silver searcher is a dependency to stuff I do
+  sudo apt-get install silversearcher-ag
 
-	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-	~/.fzf/install
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
 else
-	echo "fzf already installed";
+  echo "fzf already installed";
 fi
 
 # neovim
 if ! hash nvim 2>/dev/null; then
-	sudo apt-get install software-properties-common
-	sudo add-apt-repository ppa:neovim-ppa/unstable
-	sudo apt-get update
-	sudo apt-get install neovim
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository ppa:neovim-ppa/unstable
+  sudo apt-get update
+  sudo apt-get install neovim
 
-	# oceanic-next-shell
-	git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
+  # oceanic-next-shell
+  git clone https://github.com/mhartington/oceanic-next-shell.git ~/.config/oceanic-next-shell
 
-	# vim-plug
-	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	nvim +PlugInstall +qall
+  # vim-plug
+  curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  nvim +PlugInstall +qall
 else
-	echo "nvim already installed";
+  echo "nvim already installed";
 fi
 
 # tmux
 if ! hash tmux 2>/dev/null; then
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-	sudo apt-get install tmux
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  sudo apt-get install tmux
 else
-	echo "tmux already installed";
+  echo "tmux already installed";
 fi
 
 # stow
 if ! hash stow 2>/dev/null; then
-	sudo apt-get install stow
+  sudo apt-get install stow
 else
-	echo "stow already installed";
+  echo "stow already installed";
 fi
 
 if hash zsh 2>/dev/null; then
-	echo "zsh already installed";
+  echo "zsh already installed";
 else
-	sudo apt-get install zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	chsh -s $(which zsh)
+  sudo apt-get install zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  chsh -s $(which zsh)
 
-	# Powerline fonts
-	wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-	wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-	mkdir ~/.fonts
-	mv PowerlineSymbols.otf ~/.fonts/
-	mkdir -p ~/.config/fontconfig/conf.d
-	fc-cache -vf ~/.fonts/
-	mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+  # Powerline fonts
+  wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+  wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+  mkdir ~/.fonts
+  mv PowerlineSymbols.otf ~/.fonts/
+  mkdir -p ~/.config/fontconfig/conf.d
+  fc-cache -vf ~/.fonts/
+  mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fi
 
 stow bin

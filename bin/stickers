@@ -4,6 +4,6 @@ build='stickers'
 mkdir $build -p
 
 for filename in ./*.png; do
-	echo $build/$filename
-	convert $filename -trim -resize 512x512 $build/$filename
+  echo $build/$filename
+  convert $filename -trim -resize 512x512 $build/$filename
 done

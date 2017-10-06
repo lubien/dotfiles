@@ -1,63 +1,63 @@
 #!/usr/bin/env elixir
 
 defmodule BookProgress do
-	@alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ" |> String.codepoints
-	@args_options [
-		strict: [
-			indexes: :integer,
-			label: :string,
-			letters: :boolean,
-		],
-		aliases: [
-			i: :indexes,
-			l: :label,
-		]
-	]
+  @alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ" |> String.codepoints
+  @args_options [
+    strict: [
+      indexes: :integer,
+      label: :string,
+      letters: :boolean,
+    ],
+    aliases: [
+      i: :indexes,
+      l: :label,
+    ]
+  ]
 
-	def run() do
-		System.argv
-		|> parse_args
-		|> process
-	end
+  def run() do
+    System.argv
+    |> parse_args
+    |> process
+  end
 
-	def parse_args(args) do
-		OptionParser.parse(args, @args_options)
-	end
+  def parse_args(args) do
+    OptionParser.parse(args, @args_options)
+  end
 
-	def process({flags, values, _}) do
-		indexes = Keyword.get(flags, :indexes, 1)
-		label = Keyword.get(flags, :label, "chapter")
-		use_letters = Keyword.get(flags, :letters, false)
-		subindexes = values |> Enum.map(&String.to_integer/1)
+  def process({flags, values, _}) do
+    indexes = Keyword.get(flags, :indexes, 1)
+    label = Keyword.get(flags, :label, "chapter")
+    use_letters = Keyword.get(flags, :letters, false)
+    subindexes = values |> Enum.map(&String.to_integer/1)
 
-		1..indexes
-		|> Enum.map(fn index ->
-			index_label = if use_letters do
-				Enum.fetch!(@alphabet, index - 1)
-			else
-				index
-			end
+    1..indexes
+    |> Enum.map(fn index ->
+      index_label = if use_letters do
+        Enum.fetch!(@alphabet, index - 1)
+      else
+        index
+      end
 
-			[ render_checkbox("#{label |> String.capitalize} #{index_label}", 0)
-			| [render_subindexes(label, index_label, Enum.fetch!(subindexes, index - 1))] ]
-			|> Enum.join("\n\n")
-		end)
-		|> Enum.join("\n\n")
-		|> IO.puts
-	end
+      [ render_checkbox("#{label |> String.capitalize} #{index_label}", 0)
+      | [render_subindexes(label, index_label, Enum.fetch!(subindexes, index - 1))] ]
+      |> Enum.join("\n\n")
+    end)
+    |> Enum.join("\n\n")
+    |> IO.puts
+  end
 
-	def render_checkbox(text, depth) do
-		String.duplicate(" ", depth * 2) <> "* [ ] #{text}"
-	end
+  def render_checkbox(text, depth) do
+    String.duplicate(" ", depth * 2) <> "* [ ] #{text}"
+  end
 
-	def render_subindexes(_label, _index, 0), do: []
-	def render_subindexes(label, index, subindexes) do
-		1..subindexes
-		|> Enum.map(fn subindex ->
-			render_checkbox("#{label |> String.capitalize} #{index}.#{subindex}", 1)
-		end)
-		|> Enum.join("\n")
-	end
+  def render_subindexes(_label, _index, 0), do: []
+  def render_subindexes(label, index, subindexes) do
+    1..subindexes
+    |> Enum.map(fn subindex ->
+      render_checkbox("#{label |> String.capitalize} #{index}.#{subindex}", 1)
+    end)
+    |> Enum.join("\n")
+  end
 end
 
 BookProgress.run
