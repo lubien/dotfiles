@@ -12,6 +12,8 @@ export PATH="$HOME/bin:$PATH"
 
 [[ -f ~/aliases.sh ]] && . ~/aliases.sh
 
+[[ -f ~/.prompt.sh ]] && . ~/.prompt.sh
+
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 
