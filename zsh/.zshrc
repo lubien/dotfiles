@@ -96,7 +96,7 @@ fi
 source ~/.env.zsh
 
 # Aliases
-source ~/aliases.zsh
+source ~/aliases.sh
 
 # Map Caps to F10 for Tmux mapping
 # xmodmap -e "keycode 66 = F9" -e 'clear Lock'

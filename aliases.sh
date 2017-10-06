@@ -1,3 +1,6 @@
+# dotfiles
+alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+
 # Navigation
 alias fd='cd `loc-dir`'
 alias ..='cd ..'
@@ -17,7 +20,7 @@ alias t5='tree -L 5'
 
 # Useful
 alias n='nvim'
-alias e='nvim $(loc-file)'
+alias e='${EDITOR} $(loc-file)'
 alias c='clear'
 alias ll='ls -la'
 alias l.='ls -d .*'
@@ -36,8 +39,7 @@ alias gitc='nvim ~/.gitconfig'
 alias tmuxc='nvim ~/.tmux.conf'
 
 # Quickly jump to my folders
-alias devf='cd ~/dev'
-alias dotf='cd ~/dotfiles'
+alias fdev='cd ~/dev'
 
 # tmux
 alias tmuxr='tmux source-file ~/.tmux.conf'
