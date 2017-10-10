@@ -24,6 +24,8 @@
   # Source: http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+  fs = !git-fshow
 [core]
   autocrlf = input
   excludesfile = ~/.gitignore_global
