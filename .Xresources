@@ -15,15 +15,17 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #2b2b2b
-XTerm*foreground: #e7e7e7
+XTerm*background: #282A36
+!#2b2b2b
+XTerm*foreground: #F8F8F2
+!#e7e7e7
 XTerm*pointerColor: #16A085
 XTerm*faceName: Fixed
 XTerm*faceSize: 11
 
 ! Dracula Xresources palette
-*.foreground: #F8F8F2
 *.background: #282A36
+*.foreground: #F8F8F2
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
