@@ -33,8 +33,13 @@ alias sagi='sudo apt-get install'
 alias pac='sudo pacman -S'
 
 # Git
+alias g=git
 alias gis='git s'
 alias gp='git push'
+
+# Docker
+alias d=docker
+alias dc=docker-compose
 
 # Quickly open config files
 alias nvimc='nvim ~/.config/nvim/init.vim'
