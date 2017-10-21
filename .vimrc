@@ -177,7 +177,15 @@ let g:session_command_aliases = 1
 "*****************************************************************************
 syntax on
 set ruler
-set number
+
+" Show relative line numbers except current
+set number relativenumber
+
+" Insert mode shows proper line numbers
+autocmd InsertEnter * :set norelativenumber
+
+" Leaving insert mode returns the original number config
+autocmd InsertLeave * :set relativenumber
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
