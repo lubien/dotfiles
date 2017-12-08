@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo -e 'connect DF:37:54:13:BE:6F' | bluetoothctl

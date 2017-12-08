@@ -366,6 +366,13 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 10") end),
     awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 10") end),
 
+    -- Bluetooth Headset
+    awful.key({ altkey }, "p",
+        function ()
+            os.execute("connect-my-headset")
+            beautiful.volume.update()
+        end),
+
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
