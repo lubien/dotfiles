@@ -2,7 +2,7 @@
 
 > My personal me-friendly ZSH, Neovim, tmux setup.
 
-![Screenshot](https://i.imgur.com/7DyFLTl.png)
+![Screenshot](https://i.imgur.com/Da6pBSR.png)
 
 ## Getting started
 
