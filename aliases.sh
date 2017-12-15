@@ -63,6 +63,9 @@ alias vsus='vagrant suspend'
 alias vhalt='vagrant halt'
 alias vdie='vagrant destroy'
 
+# npm
+alias nr='npm run'
+
 # AdonisJS
 alias ace='node --harmony_proxies ./ace'
 alias acemr='ace migration:refresh && ace db:seed'
