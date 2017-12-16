@@ -24,7 +24,7 @@ alias t5='tree -L 5'
 
 # Useful
 alias n='nvim'
-alias e='${EDITOR:-vim} $(fzf)'
+alias e='${EDITOR:-nvim} $(fzf)'
 alias c='clear'
 alias ll='ls -la'
 alias l.='ls -d .*'
