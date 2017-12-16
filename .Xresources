@@ -21,7 +21,7 @@ Xft.lcdfilter: lcddefault
 !#e7e7e7
 /* XTerm*pointerColor: #16A085 */
 XTerm*faceName: Fixed
-XTerm*faceSize: 12
+XTerm*faceSize: 11
 
 ! Dracula Xresources palette
 
