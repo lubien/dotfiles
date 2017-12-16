@@ -10,7 +10,9 @@ sudo pacman -S --needed --noconfirm \
   ripgrep \
   tmux \
   neovim \
-  elixir
+  elixir \
+  bluez \
+  bluez-utils
 
 yaourt -S --needed --noconfirm \
   lain \
