@@ -1,6 +1,7 @@
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+Plug 'edkolev/tmuxline.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'scrooloose/nerdtree'
