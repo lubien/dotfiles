@@ -8,6 +8,8 @@ export PATH="$HOME/bin:$PATH"
 
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
+[[ -f ~/.config/bash/fzf-base16-ocean.config ]] && . ~/.config/bash/fzf-base16-ocean.config
+
 [[ -f ~/.env.sh ]] && . ~/.env.sh
 
 [[ -f ~/aliases.sh ]] && . ~/aliases.sh
