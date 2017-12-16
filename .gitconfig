@@ -7,6 +7,7 @@
   a = add
   s = status -s
   d = diff
+  b = branch
 
   cm = commit -m
   co = checkout
