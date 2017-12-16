@@ -8,6 +8,7 @@
   s = status -s
   d = diff
   b = branch
+  p = add -p
 
   cm = commit
   cmm = commit -m
