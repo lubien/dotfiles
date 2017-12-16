@@ -50,6 +50,9 @@ npm i -g \
   eslint \
   http-server
 
+# neovim python support
+sudo pip3 install neovim
+
 # refresh env.sh once again to
 # source nvm global node_modules binaries
 source ~/.env.sh
