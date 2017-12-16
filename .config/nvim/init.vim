@@ -78,12 +78,9 @@ endif
 
 Plug 'honza/vim-snippets'
 
-" Plug 'Shougo/neosnippet'
-" Plug 'Shougo/neosnippet-snippets'
-
 "" Color
 " Plug 'tomasr/molokai'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 
 "*****************************************************************************
