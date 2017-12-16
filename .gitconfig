@@ -9,7 +9,8 @@
   d = diff
   b = branch
 
-  cm = commit -m
+  cm = commit
+  cmm = commit -m
   co = checkout
 
   ps = push
