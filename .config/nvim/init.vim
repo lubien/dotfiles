@@ -479,6 +479,13 @@ noremap <leader>c :bd<CR>
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
+
+" Oh boi. May god have mercy of our souls
+" https://github.com/neovim/neovim/issues/2048
+" https://github.com/neovim/neovim/issues/5837
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
