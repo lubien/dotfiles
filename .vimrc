@@ -79,6 +79,7 @@ Plug 'honza/vim-snippets'
 "" Color
 " Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
+Plug 'chriskempson/base16-vim'
 
 "*****************************************************************************
 "" Custom bundles
@@ -188,12 +189,14 @@ autocmd InsertEnter * :set norelativenumber
 " Leaving insert mode returns the original number config
 autocmd InsertLeave * :set relativenumber
 
+let base16colorspace=256
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme onedark
+  colorscheme base16-ocean
 endif
 
 set mousemodel=popup
+set termguicolors
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
@@ -256,7 +259,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'base16_ocean'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -355,6 +358,9 @@ set autoread
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+"
+"" Fold
+noremap <Leader><Tab> za
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
@@ -407,6 +413,7 @@ endif
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
+nnoremap <silent> <leader>l :Lines -m<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -508,6 +515,10 @@ augroup vimrc-python
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
+
+" fold
+set foldmethod=syntax
+set foldlevelstart=-1
 
 " jedi-vim
 let g:jedi#popup_on_dot = 0
