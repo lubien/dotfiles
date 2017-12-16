@@ -191,6 +191,10 @@ autocmd InsertEnter * :set norelativenumber
 " Leaving insert mode returns the original number config
 autocmd InsertLeave * :set relativenumber
 
+" splits
+set splitbelow
+set splitright
+
 let base16colorspace=256
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
