@@ -9,9 +9,6 @@ endif
 
 let vimplug_exists=expand('~/.vim-plug/plug.vim')
 
-let g:vim_bootstrap_langs = "elixir,html,javascript,python"
-let g:vim_bootstrap_editor = "nvim"        " nvim or vim
-
 if !filereadable(vimplug_exists)
   if !executable("curl")
     echoerr "You have to install curl or first install vim-plug yourself!"
@@ -201,11 +198,7 @@ let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  '$ '
 
 " terminal emulation
-if g:vim_bootstrap_editor == 'nvim'
-  nnoremap <silent> <leader>sh :terminal<CR>
-else
-  nnoremap <silent> <leader>sh :VimShellCreate<CR>
-endif
+nnoremap <silent> <leader>sh :terminal<CR>
 
 "*****************************************************************************
 "" Functions
