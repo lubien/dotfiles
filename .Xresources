@@ -15,30 +15,78 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #282A36
+/* XTerm*background: #282A36 */
 !#2b2b2b
-XTerm*foreground: #F8F8F2
+/* XTerm*foreground: #F8F8F2 */
 !#e7e7e7
-XTerm*pointerColor: #16A085
+/* XTerm*pointerColor: #16A085 */
 XTerm*faceName: Fixed
-XTerm*faceSize: 11
+XTerm*faceSize: 12
 
 ! Dracula Xresources palette
-*.background: #282A36
-*.foreground: #F8F8F2
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15: #E6E6E6
+
+/* *.background: #282A36 */
+/* *.foreground: #F8F8F2 */
+/* *.color0:     #000000 */
+/* *.color8:     #4D4D4D */
+/* *.color1:     #FF5555 */
+/* *.color9:     #FF6E67 */
+/* *.color2:     #50FA7B */
+/* *.color10:    #5AF78E */
+/* *.color3:     #F1FA8C */
+/* *.color11:    #F4F99D */
+/* *.color4:     #BD93F9 */
+/* *.color12:    #CAA9FA */
+/* *.color5:     #FF79C6 */
+/* *.color13:    #FF92D0 */
+/* *.color6:     #8BE9FD */
+/* *.color14:    #9AEDFE */
+/* *.color7:     #BFBFBF */
+/* *.color15: #E6E6E6 */
+
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
+
+XTerm*background: base00
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
