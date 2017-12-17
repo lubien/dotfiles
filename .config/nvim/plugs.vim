@@ -1,6 +1,15 @@
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+Plug 'qpkorr/vim-bufkill'
+Plug 'lambdalisue/gina.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'andrewradev/splitjoin.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'wellle/targets.vim'
+Plug 'tommcdo/vim-exchange'
 Plug 'edkolev/tmuxline.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'wakatime/vim-wakatime'
