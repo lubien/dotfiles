@@ -23,6 +23,7 @@ alias t4='tree -L 4'
 alias t5='tree -L 5'
 
 # Useful
+alias vim='nvim'
 alias n='nvim'
 alias e='${EDITOR:-nvim} $(fzf)'
 alias c='clear'
