@@ -351,12 +351,12 @@ endif
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
+noremap <leader>c :BD<CR>
+noremap <leader>q :q<CR>
+noremap <leader>w :w<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
