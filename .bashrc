@@ -23,8 +23,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Auto start tmux
-if [[ ! $TMUX ]];
+if [[ $SSH_CONNECTION && !$TMUX ]];
 then
-  # when exit tmux exit the terminal
-  tmux && exit
+  tmux attach || tmux new
+  exit
 fi
