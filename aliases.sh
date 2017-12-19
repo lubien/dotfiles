@@ -57,6 +57,8 @@ alias tmuxn='tmux new -s'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux ls'
 alias tl='tmuxp load -y'
+alias ta='tmux attach'
+alias td='tmux detach'
 
 # Vagrant
 alias vup='vagrant up'
