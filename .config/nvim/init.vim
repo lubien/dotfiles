@@ -303,7 +303,7 @@ endif
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
-nnoremap <silent> <leader>l :Lines -m<CR>
+nnoremap <silent> <leader>l :Lines<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
