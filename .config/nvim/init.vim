@@ -242,6 +242,9 @@ set autoread
 "" Mappings
 "*****************************************************************************
 
+"" God bless
+imap jk <Esc>
+
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
