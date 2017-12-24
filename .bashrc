@@ -14,9 +14,7 @@ export PATH="$HOME/bin:$PATH"
 
 [[ -f ~/aliases.sh ]] && . ~/aliases.sh
 
-[[ -f ~/.prompt.sh ]] && . ~/.prompt.sh
-
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -28,3 +26,10 @@ then
   tmux attach || tmux new
   exit
 fi
+
+# Prompt
+
+function __update_ps1() {
+  export PS1="$(~/.bash_prompt $? 2> /dev/null)"
+}
+export PROMPT_COMMAND="__update_ps1; $PROMPT_COMMAND"
