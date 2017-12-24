@@ -20,7 +20,8 @@ Xft.lcdfilter: lcddefault
 /* XTerm*foreground: #F8F8F2 */
 !#e7e7e7
 /* XTerm*pointerColor: #16A085 */
-XTerm*faceName: Fixed
+/* XTerm*faceName: Roboto Mono for Powerline */
+XTerm*faceName: Source Code Pro for Powerline
 XTerm*faceSize: 11
 
 ! Dracula Xresources palette

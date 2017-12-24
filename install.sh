@@ -20,6 +20,7 @@ yaourt -S --needed --noconfirm \
   tree \
   dropbox \
   firefox-developer \
+  powerline-fonts-git \
   ranger
 
 # tmux plugin manager
