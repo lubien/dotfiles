@@ -6,7 +6,7 @@ alias pc='ssh lubien@$PC -p $PC_PORT'
 alias notebook='ssh lubien@$NOTE -p $NOTE_PORT'
 
 # Navigation
-alias fd='cd `loc-dir`'
+# alias fd='cd `loc-dir`'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'

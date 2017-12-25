@@ -14,6 +14,8 @@ export PATH="$HOME/bin:$PATH"
 
 [[ -f ~/aliases.sh ]] && . ~/aliases.sh
 
+[[ -f ~/.fuzzy.sh ]] && . ~/.fuzzy.sh
+
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 export NVM_DIR="$HOME/.nvm"
