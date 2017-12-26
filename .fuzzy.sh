@@ -1,5 +1,22 @@
 #!/bin/sh
 
+# Fuzzy start $EDITOR
+
+feditor() {
+	local file=$(
+		fzf \
+			--reverse \
+			--ansi \
+			--preview ' \
+				cat {}
+			'
+	)
+
+	if [[ $file ]]; then
+		${EDITOR:-nvim} $file
+	fi
+}
+
 # Directory movement
 
 find-dirs() {
