@@ -1,8 +1,11 @@
-" vim-bootstrap 59114be
+"    __         __          _
+"   / /  _ __   \ \  __   _(_)_ __ ___  _ __ ___
+"  | |  | '_ \   | | \ \ / / | '_ ` _ \| '__/ __|
+"  | |  | | | |  | |  \ V /| | | | | | | | | (__
+"  | |  |_| |_|  | |   \_/ |_|_| |_| |_|_|  \___|
+"   \_\         /_/
 
-"*****************************************************************************
-"" Vim-PLug core
-"*****************************************************************************
+" Vim-PLug core {{{
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
@@ -29,11 +32,8 @@ call plug#end()
 
 " Required:
 filetype plugin indent on
-
-
-"*****************************************************************************
-"" Basic Setup
-"*****************************************************************************"
+" }}}
+" Basic Setup {{{
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -80,9 +80,8 @@ let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
-"*****************************************************************************
-"" Visual Settings
-"*****************************************************************************
+" }}}
+" Visual Settings {{{
 syntax on
 set ruler
 
@@ -162,10 +161,8 @@ let g:airline_skip_empty_sections = 1
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_preset = 'full'
 let g:airline_powerline_fonts = 1
-
-"*****************************************************************************
-"" Abbreviations
-"*****************************************************************************
+" }}}
+" Abbreviations {{{
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -202,10 +199,8 @@ let g:vimshell_prompt =  '$ '
 
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
-
-"*****************************************************************************
-"" Functions
-"*****************************************************************************
+" }}}
+" Functions {{{
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
@@ -213,10 +208,8 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
-
-"*****************************************************************************
-"" Autocmd Rules
-"*****************************************************************************
+" }}}
+" Autocmd Rules {{{
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -238,11 +231,8 @@ augroup END
 "" make/cmake
 
 set autoread
-
-"*****************************************************************************
-"" Mappings
-"*****************************************************************************
-
+" }}}
+" Mappings {{{
 "" God bless
 imap jk <Esc>
 
@@ -380,28 +370,15 @@ vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
-
-"*****************************************************************************
-"" Custom configs
-"*****************************************************************************
+" }}}
+" Custom configs {{{
 
 " fold
+set foldenable
 set foldmethod=syntax
 set foldlevelstart=-1
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's local vim config
-if filereadable(expand("~/.config/nvim/local_init.vim"))
-  source ~/.config/nvim/local_init.vim
-endif
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
-
+" }}}
+" Convenience variables {{{
 " vim-airline
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -437,3 +414,4 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+" }}}
