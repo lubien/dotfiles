@@ -5,11 +5,12 @@
 "  | |  |_| |_|  | |   \_/ |_|_| |_| |_|_|  \___|
 "   \_\         /_/
 
-" Vim-PLug core {{{
+" Plugins {{{
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
 
+" Auto Install Vim-Plug {{{
 let vimplug_exists=expand('~/.vim-plug/plug.vim')
 
 if !filereadable(vimplug_exists)
@@ -24,10 +25,95 @@ if !filereadable(vimplug_exists)
 
   autocmd VimEnter * PlugInstall
 endif
+" }}}
 
-" Required:
 call plug#begin(expand('~/.vim-plug/plugged'))
-  source ~/.config/nvim/plugs.vim
+" Basic {{{
+Plug 'qpkorr/vim-bufkill'
+Plug 'lambdalisue/gina.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'andrewradev/splitjoin.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'wellle/targets.vim'
+Plug 'tommcdo/vim-exchange'
+Plug 'edkolev/tmuxline.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/grep.vim'
+Plug 'vim-scripts/CSApprox'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'Raimondi/delimitMate'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
+Plug 'avelino/vim-bootstrap-updater'
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if v:version >= 704
+  "" Snippets
+  Plug 'SirVer/ultisnips'
+endif
+
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-fugitive'
+" }}}
+" FZF {{{
+if isdirectory('/usr/local/opt/fzf')
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'
+endif
+" }}}
+" Make {{{
+let g:make = 'gmake'
+if exists('make')
+  let g:make = 'make'
+endif
+Plug 'Shougo/vimproc.vim', {'do': g:make}
+" }}}
+" Session {{{
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+" }}}
+" Shell {{{
+if v:version >= 703
+  Plug 'Shougo/vimshell.vim'
+endif
+" }}}
+" Color {{{
+" Plug 'tomasr/molokai'
+" Plug 'joshdick/onedark.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'joshdick/onedark.vim'
+" }}}
+" Elixir {{{
+Plug 'elixir-lang/vim-elixir'
+Plug 'carlosgaldino/elixir-snippets'
+" }}}
+" HTML {{{
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+" }}}
+" Javascript {{{
+Plug 'jelera/vim-javascript-syntax'
+"}}}
+" Python {{{
+Plug 'davidhalter/jedi-vim'
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+" }}}
 call plug#end()
 
 " Required:
