@@ -13,6 +13,9 @@ feditor() {
 	)
 
 	if [[ $file ]]; then
+		# Save command in history as sometimes I want
+		# to easily re-edit some files
+		history -s ${EDITOR:-nvim} $file
 		${EDITOR:-nvim} $file
 	fi
 }
