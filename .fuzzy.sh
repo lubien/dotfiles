@@ -125,3 +125,12 @@ faur() {
 		yaourt -S $pack
 	fi
 }
+
+ffonts() {
+	fc-list \
+		: family \
+	| \
+	fzf +m \
+		--reverse \
+		--ansi
+}

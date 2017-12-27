@@ -1,36 +1,29 @@
-#!/bin/zsh
+#!/bin/sh
 
 # git-fdiff - git diff browser
 # https://github.com/lubien/dotfiles/
 
-git-fdiff() {
-  local g=(git status --short)
+fdiff() {
+  git status \
+		--short \
+	| \
+  fzf \
+    --ansi \
+    --reverse \
+    --tiebreak=index \
+    --no-sort \
+    --bind=ctrl-s:toggle-sort \
+    --preview ' \
+    	line={}
+    	type=$(echo $line | xargs | cut -d " " -f 1)
+    	filename=$(echo $line | xargs | cut -d " " -f 2)
 
-  local fzf=(
-    fzf
-    --ansi
-    --reverse
-    --tiebreak=index
-    --no-sort
-    --bind=ctrl-s:toggle-sort
-    --preview '
-    f() {
-      local line="$@"
-      local type=$(echo $line | xargs | cut -d " " -f 1)
-      local filename=$(echo $line | xargs | cut -d " " -f 2)
-
-      if [ $type = "??" ]; then
-        cat $filename
-      else
-        git diff --color=always $filename
-      fi
-    };
-
-    f {}
+    	if [ $type = "??" ]; then
+      	cat $filename
+    	else
+      	git diff --color=always $filename
+    	fi
     '
-  )
-
-  $g | $fzf
 }
 
-git-fdiff "$@"
+fdiff "$@"
