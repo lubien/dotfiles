@@ -273,9 +273,6 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
@@ -325,14 +322,54 @@ set autoread
 "" God bless
 imap jk <Esc>
 
-"" Split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
+noremap <leader>q :q<CR>
 
-"" Fold
+" Buffer {{{
+nnoremap <silent> <leader>bf :Buffers<CR>
+noremap <leader>bd :BD<CR>
+noremap <leader>bw :w<CR>
+
+noremap <leader>z :bp<CR>
+noremap <leader>bp :bp<CR>
+
+noremap <leader>x :bn<CR>
+noremap <leader>bn :bn<CR>
+" }}}
+" Clipboard {{{
+noremap YY "+y<CR>
+noremap <leader>p "+gP<CR>
+noremap XX "+x<CR>
+" }}}
+" Deoplete {{{
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+inoremap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+" }}}
+" Edit {{{
+"" Quickly edit relative to buffer folder
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+" }}}
+" Files {{{
+nnoremap <silent> <leader>ff :FZF -m<CR>
+nnoremap <silent> <leader>fl :Lines<CR>
+" }}}
+" Fold {{{
 noremap <Leader><Tab> za
-
-"" Git
+" }}}
+" Functions {{{
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+nnoremap <silent> <F4> :TagbarToggle<CR>
+" }}}
+" GBrowse {{{
+"" Open current line on GitHub
+nnoremap <Leader>o :.Gbrowse<CR>
+" }}}
+" Git {{{
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
@@ -341,26 +378,59 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
+" }}}
+" Search {{{
+"" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
 
-" session management
+" }}}
+" Session {{{
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
-
-"" Tabs
+" }}}
+" Split {{{
+noremap <Leader>sh :<C-u>split<CR>
+noremap <Leader>sv :<C-u>vsplit<CR>
+" }}}
+" Tabs {{{
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
+" }}}
+" Visual {{{
+"" Vmap for maintain Visual Mode after shifting > and <
+vmap < <gv
+vmap > >gv
 
-"" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
+"" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
-"" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" }}}
+" Windows {{{
+if has('nvim') " Oh boi. May god have mercy of our souls
+  " https://github.com/neovim/neovim/issues/2048
+  " https://github.com/neovim/neovim/issues/5837
+  nmap <BS> <C-w>h
+endif
 
-"" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+noremap <C-h> <C-w>h
+noremap <leader>wh <C-w>h
+
+noremap <C-j> <C-w>j
+noremap <leader>wj <C-w>j
+
+
+noremap <C-k> <C-w>k
+noremap <leader>wk <C-w>k
+
+noremap <C-l> <C-w>l
+noremap <leader>wl <C-w>l
+" }}}
+
+let g:tagbar_autofocus = 1
 
 "" fzf.vim
 set wildmode=list:longest,list:full
@@ -386,9 +456,6 @@ let g:UltiSnipsEditSplit="vertical"
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
-imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-inoremap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -398,10 +465,6 @@ let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
-
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
@@ -413,52 +476,6 @@ endif
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
-
-noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
-noremap XX "+x<CR>
-
-if has('macunix')
-  " pbcopy for OSX copy/paste
-  vmap <C-x> :!pbcopy<CR>
-  vmap <C-c> :w !pbcopy<CR><CR>
-endif
-
-"" Buffer nav
-noremap <leader>z :bp<CR>
-noremap <leader>x :bn<CR>
-
-"" Close buffer
-noremap <leader>c :BD<CR>
-noremap <leader>q :q<CR>
-noremap <leader>w :w<CR>
-
-"" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
-
-"" Switching windows
-
-" Oh boi. May god have mercy of our souls
-" https://github.com/neovim/neovim/issues/2048
-" https://github.com/neovim/neovim/issues/5837
-if has('nvim')
-  nmap <BS> <C-W>h
-endif
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
-
-"" Vmap for maintain Visual Mode after shifting > and <
-vmap < <gv
-vmap > >gv
-
-"" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
-"" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
 " }}}
 " Custom configs {{{
 
