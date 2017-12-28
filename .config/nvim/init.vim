@@ -92,8 +92,7 @@ endif
 " }}}
 " Color {{{
 " Plug 'tomasr/molokai'
-" Plug 'joshdick/onedark.vim'
-Plug 'chriskempson/base16-vim'
+" Plug 'chriskempson/base16-vim'
 Plug 'joshdick/onedark.vim'
 " }}}
 " Elixir {{{
@@ -174,6 +173,9 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 
+" Remove split separators
+set fillchars=""
+
 " Show relative line numbers except current
 set number relativenumber
 
@@ -190,7 +192,7 @@ set splitright
 let base16colorspace=256
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme base16-ocean
+  colorscheme onedark
 endif
 
 set mousemodel=popup
@@ -241,7 +243,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'base16_ocean'
+let g:airline_theme = 'onedark'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -265,13 +267,7 @@ cnoreabbrev Q q
 cnoreabbrev Qall qall
 
 "" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
+let NERDTreeShowHidden=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -294,24 +290,33 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
+
+" https://stackoverflow.com/a/46171509
+function MyNerdToggle()
+  if &filetype == 'nerdtree'
+    :NERDTreeToggle
+  else
+    :NERDTreeFind
+  endif
+endfunction
 " }}}
 " Autocmd Rules {{{
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
-  autocmd!
-  autocmd BufEnter * :syntax sync maxlines=200
+    autocmd!
+    autocmd BufEnter * :syntax sync maxlines=200
 augroup END
 
 "" Remember cursor position
 augroup vimrc-remember-cursor-position
-  autocmd!
-  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    autocmd!
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
 
 "" txt
 augroup vimrc-wrapping
-  autocmd!
-  autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
+    autocmd!
+    autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
 augroup END
 
 "" make/cmake
@@ -361,9 +366,8 @@ nnoremap <silent> <leader>fl :Lines<CR>
 noremap <Leader><Tab> za
 " }}}
 " Functions {{{
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
-nnoremap <silent> <F4> :TagbarToggle<CR>
+nnoremap <silent> <F2> :call MyNerdToggle()<CR>
+nnoremap <silent> <F3> :TagbarToggle<CR>
 " }}}
 " GBrowse {{{
 "" Open current line on GitHub
