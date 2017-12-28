@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Auto start tmux
-if [[ -z "$TMUX" ]]; then
+if [[ $SSH && -z "$TMUX" ]]; then
   tmux has-session &> /dev/null
   if [ $? -eq 1 ]; then
     exec tmux new
