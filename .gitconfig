@@ -17,7 +17,7 @@
   ps = push
   pl = pull
 
-  wip = !git add -A && git commit -m "SAVEPOINT"
+  wip = !git-wip
 
   undo = reset HEAD~1 --mixed
 

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+wip() {
+	local last=$(git log -1 --pretty=%B)
+
+	if [[ $last == "WIP" ]]; then
+		git undo
+	fi
+
+  git add -A
+  git commit -m "WIP"
+}
+
+wip "$@"
