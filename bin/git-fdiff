@@ -13,8 +13,8 @@ fdiff() {
     --tiebreak=index \
     --no-sort \
     --bind=ctrl-s:toggle-sort \
-    --bind=ctrl-j:preview-down \
-    --bind=ctrl-k:preview-up \
+    --bind=ctrl-l:preview-down \
+    --bind=ctrl-h:preview-up \
     --preview ' \
     	line={}
     	type=$(echo $line | xargs | cut -d " " -f 1)

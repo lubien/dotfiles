@@ -19,8 +19,8 @@ fshow() {
     --tiebreak=index \
     --no-sort \
     --bind=ctrl-s:toggle-sort \
-    --bind=ctrl-j:preview-down \
-    --bind=ctrl-k:preview-up \
+    --bind=ctrl-l:preview-down \
+    --bind=ctrl-h:preview-up \
     --preview 'f() { set -- $(echo -- "$@" | grep -o "[a-f0-9]\{7\}"); [ $# -eq 0 ] || git show --color=always $1; }; f {}'
 }
 
