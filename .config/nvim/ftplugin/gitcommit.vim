@@ -1,0 +1,1 @@
+autocmd VimEnter * :0
