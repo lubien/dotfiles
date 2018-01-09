@@ -24,6 +24,10 @@ alias t4='tree -L 4'
 alias t5='tree -L 5'
 
 # Useful
+# Without the setting below, open two big files in nvim
+# on a vertical split window. Scroll one and see the other bug.
+# https://github.com/neovim/neovim/issues/6802
+alias nvim="TERM=tmux-256color nvim"
 alias vim='nvim'
 alias n='nvim'
 alias e='feditor'
