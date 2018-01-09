@@ -1,11 +1,3 @@
-
---[[
-
-     Awesome WM configuration template
-     github.com/copycat-killer
-
---]]
-
 -- {{{ Required libraries
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
@@ -577,7 +569,10 @@ awful.rules.rules = {
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
                      size_hints_honor = false
-     }
+     },
+      callback = function (c)
+        awful.placement.centered(c, nil)
+      end
     },
 
     -- Titlebars
@@ -590,6 +585,14 @@ awful.rules.rules = {
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
+
+    -- xterm
+    { rule = { instance = "xterm" },
+      callback = function (c)
+        c:geometry( { width = 1280 , height = 720 } )
+        awful.placement.centered(c, nil)
+      end
+    },
 }
 -- }}}
 
