@@ -113,6 +113,9 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 " }}}
+" GraphQL {{{
+Plug 'jparise/vim-graphql'
+" }}}
 call plug#end()
 
 " Required:
@@ -482,6 +485,7 @@ if has('unnamedplus')
 endif
 " }}}
 " Custom configs {{{
+autocmd FileType vue syntax sync fromstart
 
 " fold
 set foldenable
