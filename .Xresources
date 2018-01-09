@@ -24,7 +24,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 XTerm*faceName: Source Code Pro for Powerline
-XTerm*faceSize: 11
+XTerm*faceSize: 10
 
 ! Themes {{{1
 /* ! Dracula {{{ */
