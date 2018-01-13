@@ -35,8 +35,4 @@ if [[ $SSH && -z "$TMUX" ]]; then
 fi
 
 # Prompt
-
-function __update_ps1() {
-  export PS1="$(~/.bash_prompt $? 2> /dev/null)"
-}
-export PROMPT_COMMAND="__update_ps1; $PROMPT_COMMAND"
+source ~/.bash_prompt
