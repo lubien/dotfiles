@@ -25,6 +25,10 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 XTerm*faceName: Source Code Pro for Powerline
 XTerm*faceSize: 10
+XTerm*ttyModes:         erase ^?
+XTerm*VT100.Translations: \
+        #override <Key>BackSpace: string(0x7f) \n\
+		  <Key>Delete:    string(0x1b) string("[3~")
 
 ! Themes {{{1
 /* ! Dracula {{{ */
