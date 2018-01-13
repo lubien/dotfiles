@@ -3,6 +3,8 @@
 echo "Installing packages"
 
 sudo pacman -S --needed --noconfirm \
+  lain \
+  awesome-freedesktop \
   awesome \
   xterm \
   yaourt \
@@ -15,12 +17,11 @@ sudo pacman -S --needed --noconfirm \
   bluez-utils
 
 yaourt -S --needed --noconfirm \
-  lain \
-  awesome-freedesktop \
   tree \
   dropbox \
-  firefox-developer \
+  firefox-developer-edition \
   powerline-fonts-git \
+  lightscreen \
   ranger
 
 # tmux plugin manager
