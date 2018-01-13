@@ -6,9 +6,11 @@
 [alias]
   a = add
   s = status -s
+  st = stash
   d = diff
   b = branch
   p = add -p
+  r = rebase
 
   cm = commit
   cmm = commit -m
