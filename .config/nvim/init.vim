@@ -131,7 +131,7 @@ set bomb
 set binary
 
 "" Spelling
-set spell spelllang=en,pt
+" set spell spelllang=en,pt
 
 "" Fix backspace indent
 set backspace=indent,eol,start
