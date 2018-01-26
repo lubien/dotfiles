@@ -48,6 +48,7 @@ local function run_once(cmd_arr)
         awful.spawn.with_shell("nm-applet &")
         awful.spawn.with_shell("blueman-applet &")
         awful.spawn.with_shell("dropbox &")
+        awful.spawn.with_shell("lightscreen &")
     end
 end
 
