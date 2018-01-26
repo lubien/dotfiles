@@ -22,6 +22,7 @@ yaourt -S --needed --noconfirm \
   firefox-developer-edition \
   powerline-fonts-git \
   flameshot \
+  w3m \
   ranger
 
 # tmux plugin manager
