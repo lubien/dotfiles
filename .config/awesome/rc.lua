@@ -433,7 +433,8 @@ globalkeys = awful.util.table.join(
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end),
-    awful.key({ modkey }, "a", function () awful.spawn(guieditor) end),
+    awful.key({ modkey }, "a", function () awful.spawn(string.format("%s -e %s", terminal, editor)) end,
+              {description = "open neovim"}),
 
     -- Default
     --[[ Menubar ]]
