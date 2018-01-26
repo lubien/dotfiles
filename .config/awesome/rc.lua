@@ -361,7 +361,7 @@ globalkeys = awful.util.table.join(
     -- Bluetooth Headset
     awful.key({ altkey }, "p",
         function ()
-            os.execute("connect-my-headset")
+            os.execute("sleep 3; connect-my-headset") -- it has a delay before one can connect
             beautiful.volume.update()
         end),
 
