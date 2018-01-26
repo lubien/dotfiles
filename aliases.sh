@@ -80,6 +80,11 @@ alias acemr='ace migration:refresh && ace db:seed'
 
 # Moar useful stuff
 
+# Fuzzy
+
+alias gcob='git-fcheckout'
+alias gsha='git-fsha'
+
 # Fuzzy change dir
 # fd_function() {
 #   dir=`loc-dir`
