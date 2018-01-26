@@ -21,7 +21,7 @@ yaourt -S --needed --noconfirm \
   dropbox \
   firefox-developer-edition \
   powerline-fonts-git \
-  lightscreen \
+  flameshot \
   ranger
 
 # tmux plugin manager

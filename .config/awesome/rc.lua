@@ -48,7 +48,6 @@ local function run_once(cmd_arr)
         awful.spawn.with_shell("nm-applet &")
         awful.spawn.with_shell("blueman-applet &")
         awful.spawn.with_shell("dropbox &")
-        awful.spawn.with_shell("lightscreen &")
     end
 end
 
@@ -206,10 +205,6 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    -- Take a screenshot
-    -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end),
-
     -- Hotkeys
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
@@ -437,6 +432,9 @@ globalkeys = awful.util.table.join(
               {description = "open neovim"}),
     awful.key({ modkey }, "e", function () awful.spawn(string.format("%s -e ranger", terminal)) end,
               {description = "open ranger"}),
+    awful.key({  }, "Print", function () awful.spawn(string.format("%s -e flameshot gui", terminal)) end,
+              {description = "screenshot"}),
+
 
     -- Default
     --[[ Menubar ]]
