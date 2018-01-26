@@ -82,6 +82,9 @@ if exists('make')
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 " }}}
+" C/C++ {{{
+Plug 'justinmk/vim-syntax-extra'
+" }}}
 " Session {{{
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
