@@ -47,7 +47,6 @@ local function run_once(cmd_arr)
         awful.spawn.with_shell("exec ~/.config/awesome/autorun.sh &")
         awful.spawn.with_shell("nm-applet &")
         awful.spawn.with_shell("blueman-applet &")
-        awful.spawn.with_shell("thunar --daemon &")
         awful.spawn.with_shell("dropbox &")
     end
 end
