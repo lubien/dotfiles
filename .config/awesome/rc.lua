@@ -360,6 +360,13 @@ globalkeys = awful.util.table.join(
             beautiful.volume.update()
         end),
 
+    -- Screenshot
+    awful.key({ altkey }, "Print",
+        function ()
+            os.execute("flameshot gui")
+            beautiful.volume.update()
+        end),
+
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
@@ -432,9 +439,6 @@ globalkeys = awful.util.table.join(
               {description = "open neovim"}),
     awful.key({ modkey }, "e", function () awful.spawn(string.format("%s -e ranger", terminal)) end,
               {description = "open ranger"}),
-    awful.key({  }, "Print", function () awful.spawn(string.format("%s -e flameshot gui", terminal)) end,
-              {description = "screenshot"}),
-
 
     -- Default
     --[[ Menubar ]]
