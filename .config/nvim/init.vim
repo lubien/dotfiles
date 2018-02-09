@@ -494,7 +494,7 @@ autocmd FileType vue syntax sync fromstart
 " fold
 set foldenable
 set foldmethod=syntax
-set foldlevelstart=-1
+" set foldlevelstart=-1
 " }}}
 " Convenience variables {{{
 " vim-airline
