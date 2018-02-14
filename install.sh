@@ -23,6 +23,8 @@ yaourt -S --needed --noconfirm \
   powerline-fonts-git \
   flameshot \
   w3m \
+  thunar-gtk3 \
+  lxappearence \
   ranger
 
 # tmux plugin manager
