@@ -24,7 +24,7 @@ yaourt -S --needed --noconfirm \
   flameshot \
   w3m \
   thunar-gtk3 \
-  lxappearence \
+  lxappearance \
   ranger
 
 # tmux plugin manager
