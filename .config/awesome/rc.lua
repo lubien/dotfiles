@@ -445,6 +445,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 
+    awful.key({ modkey, altkey }, "p", function() menubar.refresh() end,
+              {description = "show the menubar", group = "launcher"}),
     --[[ dmenu
     awful.key({ modkey }, "x", function ()
         awful.spawn(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
