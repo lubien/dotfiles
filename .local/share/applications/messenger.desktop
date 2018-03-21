@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Messenger
+StartupWMClass=Google-chrome
+Exec=google-chrome-stable --app=http://messenger.com/ --new-window
+Terminal=false
+Icon=messenger
+Type=Application
+Categories=Network;InstantMessaging;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Play Books
+StartupWMClass=Play-books
+Exec=google-chrome-stable --app=https://play.google.com/books/uploads --new-window
+Terminal=false
+Icon=play-books
+Type=Application
+Categories=Education;Literature;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
