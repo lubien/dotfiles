@@ -364,7 +364,6 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey }, "Print",
         function ()
             os.execute("flameshot gui")
-            beautiful.volume.update()
         end),
 
     -- ALSA volume control
