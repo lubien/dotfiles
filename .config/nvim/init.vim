@@ -203,6 +203,7 @@ if !exists('g:not_finish_vimplug')
 endif
 
 set mousemodel=popup
+set mouse=a
 set termguicolors
 set t_Co=256
 set guioptions=egmrti
