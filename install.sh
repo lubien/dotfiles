@@ -36,25 +36,29 @@ if [ ! -d $TPM_DIR ]; then
   git clone https://github.com/tmux-plugins/tpm $TPM_DIR
 fi
 
-export NVM_DIR="$HOME/.nvm"
-if [ ! -d $NVM_DIR ]; then
-  echo "Installing nvm"
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+export ASDF_DIR="$HOME/.asdf"
+if [ ! -d $ASDF_DIR ]; then
+  echo "Installing asdf"
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.0
 fi
 
-# refresh env.sh to source nvm
+# refresh env.sh to source asdf
 source ~/.env.sh
 
-# download a nodejs version
-if ! hash node 2>/dev/null; then
-  echo "Installing NodeJS"
-  nvm install 8
-  nvm use 8
-fi
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+asdf install elixir 1.7
+asdf global elixir 1.7
+
+asdf install nodejs 11.0.0
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring > /dev/null
+asdf global nodejs 11.0.0
 
 # node global modules
 echo "Installing NodeJS useful global modules"
 npm i -g \
+  yarn \
   vue-cli \
   eslint \
   http-server
