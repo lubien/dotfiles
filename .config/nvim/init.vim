@@ -204,7 +204,10 @@ endif
 
 set mousemodel=popup
 set mouse=a
-set termguicolors
+" This is unset because:
+"   1. Resize xterm while in neovim creates blankspaces on rendering
+"   2. Does not fit with my current transparency setup for xterm
+" set termguicolors
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
