@@ -3,7 +3,7 @@
 echo "Installing packages"
 
 sudo pacman -S --needed --noconfirm \
-  lain \
+  lain-git \
   awesome-freedesktop \
   awesome \
   xterm \
@@ -23,8 +23,10 @@ yaourt -S --needed --noconfirm \
   powerline-fonts-git \
   flameshot \
   w3m \
-  thunar-gtk3 \
+  # thunar-gtk3 \
   lxappearance \
+  tamsyn-font \
+  xcompmgr \
   ranger
 
 # tmux plugin manager
@@ -59,6 +61,12 @@ npm i -g \
 
 # neovim python support
 sudo pip3 install neovim
+
+# enable bitmap fonts
+if [ -e /etc/fonts/conf.d/70-no-bitmaps.conf ]
+then
+	sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+fi
 
 # refresh env.sh once again to
 # source nvm global node_modules binaries
