@@ -55,7 +55,7 @@ run_once({ "unclutter -root" }) -- entries must be comma-separated
 -- }}}
 
 -- {{{ Variable definitions
-local chosen_theme = "multicolor"
+local chosen_theme = "dremora"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "xterm" -- "xterm4-terminal"
@@ -594,10 +594,16 @@ awful.rules.rules = {
 
     -- xterm
     { rule = { instance = "xterm" },
+      properties = { opacity = 0.95 },
       callback = function (c)
         c:geometry( { width = 1280 , height = 720 } )
         awful.placement.centered(c, nil)
       end
+    },
+
+    -- quake (dropdown application)
+    { rule = { instance = "QuakeDD" },
+      properties = { opacity = 0.95 }
     },
 }
 -- }}}

@@ -24,6 +24,10 @@ if [ -f "$usermodmap" ]; then
   echo "runned"
 fi
 
+if hash xcompmgr 2>/dev/null; then
+	xcompmgr &
+fi
+
 # My PC has monitor issues :P
 if [ $(hostname) = "joestar" ]
 then
