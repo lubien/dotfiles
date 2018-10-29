@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing packages"
+echo "Installing pacman packages"
 
 sudo pacman -S --needed --noconfirm \
   lain-git \
@@ -16,18 +16,20 @@ sudo pacman -S --needed --noconfirm \
   bluez \
   bluez-utils
 
-yaourt -S --needed --noconfirm \
-  tree \
+echo "Installing yaourt packages"
+
+yaourt -S --needed \
+	tree \
   dropbox \
   firefox-developer-edition \
   powerline-fonts-git \
   flameshot \
   w3m \
-  # thunar-gtk3 \
   lxappearance \
   tamsyn-font \
   xcompmgr \
   ranger
+  # thunar-gtk3 \
 
 # tmux plugin manager
 TPM_DIR=~/.tmux/plugins/tpm
