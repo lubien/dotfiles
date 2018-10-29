@@ -350,8 +350,8 @@ globalkeys = awful.util.table.join(
     -- awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end),
 
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 10") end),
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 10") end),
+    awful.key({ modkey, "Shift" }, "Up", function () awful.util.spawn("xbacklight -inc 15") end),
+    awful.key({ modkey, "Shift" }, "Down", function () awful.util.spawn("xbacklight -dec 15") end),
 
     -- Bluetooth Headset
     awful.key({ altkey }, "p",
@@ -369,12 +369,12 @@ globalkeys = awful.util.table.join(
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set 'Master' 1%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            os.execute(string.format("amixer -q set 'Master' 1%%-", beautiful.volume.channel))
             beautiful.volume.update()
         end),
     awful.key({ altkey }, "m",
