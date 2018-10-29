@@ -155,7 +155,9 @@ local bat = lain.widget.bat({
     settings = function()
         bat_header = " Bat "
         bat_p      = bat_now.perc .. " "
-        widget:set_markup(markup.font(theme.font, markup(gray, bat_header) .. markup(white, bat_p)))
+        if bat_now.perc < 100 then
+          widget:set_markup(markup.font(theme.font, markup(gray, bat_header) .. markup(white, bat_p)))
+        end
     end
 })
 
