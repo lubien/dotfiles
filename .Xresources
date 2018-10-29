@@ -32,3 +32,4 @@ XTerm*ttyModes:         erase ^?
 XTerm*VT100.Translations: \
         #override <Key>BackSpace: string(0x7f) \n\
 		  <Key>Delete:    string(0x1b) string("[3~")
+XTerm*selectToClipboard: true
